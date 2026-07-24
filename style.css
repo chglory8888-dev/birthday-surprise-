@@ -794,3 +794,89 @@ button {
     }
 
 }
+/* All Device Responsive Design */
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+
+/* Laptop & Desktop 💻 */
+
+@media (min-width:1024px){
+
+    .message-card{
+        max-width:600px;
+    }
+
+    .memory{
+        width:280px;
+        height:280px;
+    }
+
+}
+
+
+/* Tablet 📱 */
+
+@media (min-width:600px) and (max-width:1023px){
+
+    .message-card{
+        width:80%;
+    }
+
+    .memory{
+        width:220px;
+        height:220px;
+    }
+
+    .cake,
+    .gift{
+        font-size:90px;
+    }
+
+}
+
+
+/* Android Phone 📱 */
+
+@media (max-width:599px){
+
+    h1{
+        font-size:28px;
+    }
+
+    h2{
+        font-size:22px;
+    }
+
+    .message-card{
+        width:95%;
+        padding:15px;
+    }
+
+    .memory{
+        width:90%;
+        height:auto;
+    }
+
+    .cake,
+    .gift{
+        font-size:70px;
+    }
+
+    button{
+        width:90%;
+        padding:12px;
+    }
+
+    .final-screen{
+        width:95%;
+    }
+
+}
