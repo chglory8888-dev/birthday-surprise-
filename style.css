@@ -952,3 +952,124 @@ body{
     }
 
 }
+/* Body Design */
+
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+
+    margin:0;
+    padding:0;
+    font-family:'Poppins',Arial,sans-serif;
+    background:linear-gradient(135deg,#ffe0ec,#ffffff);
+    overflow-x:hidden;
+
+}
+
+
+
+.container{
+
+    text-align:center;
+    padding:20px;
+
+}
+
+
+
+h1,h2{
+
+    color:#e91e63;
+
+}
+
+
+
+
+/* Main Love Message Card */
+
+.message-card{
+
+    width:85%;
+    max-width:550px;
+    margin:30px auto;
+    padding:25px;
+    background:rgba(255,255,255,0.9);
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    animation:fadeIn 2s ease;
+
+}
+
+
+
+.message-card h2{
+
+    font-size:30px;
+
+}
+
+
+
+.message-card p{
+
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+
+}
+
+
+
+
+
+/* Fade Animation */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* Countdown Section */
+
+.countdown-box{
+
+    margin:40px auto;
+    padding:20px;
+    width:80%;
+    max-width:500px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+}
+
+
+
+#countdown{
+
+    font-size:25px;
+    color:#d81b60;
+    font-weight:bold;
+
+}
