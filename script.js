@@ -135,3 +135,24 @@ function openGift(){
     createHearts();
 
 }
+// Background Music
+
+function startMusic(){
+
+    let music = document.getElementById("music");
+
+    music.play();
+
+}
+
+
+// Full Screen Celebration
+
+function celebration(){
+
+    document.getElementById("celebration")
+    .style.display="block";
+
+    createHearts();
+
+}
