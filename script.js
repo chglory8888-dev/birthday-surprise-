@@ -340,3 +340,4 @@ seconds+" Seconds";
 
 
 },1000);
+if(password === "27-07-2020"){
