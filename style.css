@@ -584,3 +584,50 @@ transform:translateY(-60px) rotate(-10deg);
         transform: scale(1.08);
     }
 }
+/* Cake Animation */
+
+.cake-section {
+    text-align:center;
+    margin-top:40px;
+}
+
+.cake {
+    font-size:100px;
+    cursor:pointer;
+    animation: cakeBounce 1.5s infinite;
+}
+
+
+@keyframes cakeBounce {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+.cut {
+    animation: cutAnimation 1s forwards;
+}
+
+
+@keyframes cutAnimation {
+
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    to {
+        transform: rotate(15deg) scale(1.2);
+    }
+
+}
