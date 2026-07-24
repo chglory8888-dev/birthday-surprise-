@@ -269,3 +269,635 @@ transform:translateY(0px);
 }
 
 }
+/* ===========================
+   🎂 BIRTHDAY CAKE
+=========================== */
+
+.cake-container{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.cake{
+position:relative;
+margin:40px 0;
+width:240px;
+height:220px;
+}
+
+.cake-bottom{
+position:absolute;
+bottom:0;
+width:240px;
+height:70px;
+background:#ff9aa2;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.cake-middle{
+position:absolute;
+bottom:65px;
+left:20px;
+width:200px;
+height:60px;
+background:#ffd6a5;
+border-radius:15px;
+}
+
+.cake-top{
+position:absolute;
+bottom:120px;
+left:40px;
+width:160px;
+height:50px;
+background:#fdffb6;
+border-radius:15px;
+}
+
+/* ===========================
+   🕯️ CANDLES
+=========================== */
+
+.candles{
+position:absolute;
+top:-10px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:25px;
+}
+
+.candle{
+width:12px;
+height:55px;
+background:white;
+border-radius:10px;
+position:relative;
+}
+
+.flame{
+position:absolute;
+top:-18px;
+left:50%;
+transform:translateX(-50%);
+width:14px;
+height:20px;
+background:orange;
+border-radius:50%;
+animation:flicker .5s infinite alternate;
+box-shadow:0 0 15px gold;
+}
+
+@keyframes flicker{
+
+0%{
+transform:translateX(-50%) scale(1);
+}
+
+100%{
+transform:translateX(-50%) scale(1.2);
+}
+
+}
+
+/* ===========================
+   🎁 GIFT BOX
+=========================== */
+
+.gift-box{
+
+position:relative;
+
+width:180px;
+height:180px;
+
+margin-top:40px;
+
+cursor:pointer;
+
+transition:.5s;
+
+}
+
+.gift-box:hover{
+
+transform:scale(1.08);
+
+}
+
+.gift-body{
+
+position:absolute;
+
+bottom:0;
+
+width:180px;
+
+height:120px;
+
+background:#ff4081;
+
+border-radius:10px;
+
+}
+
+.gift-lid{
+
+position:absolute;
+
+top:30px;
+
+width:180px;
+
+height:35px;
+
+background:#ec407a;
+
+border-radius:10px;
+
+z-index:5;
+
+transition:.8s;
+
+}
+
+.gift-ribbon-vertical{
+
+position:absolute;
+
+left:82px;
+
+width:16px;
+
+height:180px;
+
+background:white;
+
+z-index:6;
+
+}
+
+.gift-ribbon-horizontal{
+
+position:absolute;
+
+top:82px;
+
+width:180px;
+
+height:16px;
+
+background:white;
+
+z-index:6;
+
+}
+
+/* ===========================
+   📸 PHOTO SLIDER
+=========================== */
+
+.slider{
+
+margin-top:30px;
+
+width:340px;
+
+height:520px;
+
+overflow:hidden;
+
+border-radius:25px;
+
+box-shadow:0 0 30px hotpink;
+
+}
+
+.slider img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:1s;
+
+}
+
+/* ===========================
+   🎥 VIDEO
+=========================== */
+
+.video-slider video{
+
+width:350px;
+
+border-radius:20px;
+
+box-shadow:0 0 25px white;
+
+}
+
+/* ===========================
+   ❤️ FAMILY CARD
+=========================== */
+
+.family-card{
+
+width:90%;
+
+max-width:900px;
+
+padding:40px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(12px);
+
+border-radius:25px;
+
+box-shadow:0 0 25px rgba(255,255,255,.3);
+
+}
+
+.family-list{
+
+margin-top:20px;
+
+list-style:none;
+
+}
+
+.family-list li{
+
+font-size:24px;
+
+margin:12px 0;
+
+}
+
+/* ===========================
+   📱 MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.calligraphy{
+
+font-size:70px;
+
+}
+
+h1{
+
+font-size:36px;
+
+}
+
+h2{
+
+font-size:28px;
+
+}
+
+p{
+
+font-size:18px;
+
+}
+
+.slider{
+
+width:90%;
+
+height:420px;
+
+}
+
+.video-slider video{
+
+width:90%;
+
+}
+
+}
+/* ===========================
+   🎂 BIRTHDAY CAKE
+=========================== */
+
+.cake-container{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.cake{
+position:relative;
+margin:40px 0;
+width:240px;
+height:220px;
+}
+
+.cake-bottom{
+position:absolute;
+bottom:0;
+width:240px;
+height:70px;
+background:#ff9aa2;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.cake-middle{
+position:absolute;
+bottom:65px;
+left:20px;
+width:200px;
+height:60px;
+background:#ffd6a5;
+border-radius:15px;
+}
+
+.cake-top{
+position:absolute;
+bottom:120px;
+left:40px;
+width:160px;
+height:50px;
+background:#fdffb6;
+border-radius:15px;
+}
+
+/* ===========================
+   🕯️ CANDLES
+=========================== */
+
+.candles{
+position:absolute;
+top:-10px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:25px;
+}
+
+.candle{
+width:12px;
+height:55px;
+background:white;
+border-radius:10px;
+position:relative;
+}
+
+.flame{
+position:absolute;
+top:-18px;
+left:50%;
+transform:translateX(-50%);
+width:14px;
+height:20px;
+background:orange;
+border-radius:50%;
+animation:flicker .5s infinite alternate;
+box-shadow:0 0 15px gold;
+}
+
+@keyframes flicker{
+
+0%{
+transform:translateX(-50%) scale(1);
+}
+
+100%{
+transform:translateX(-50%) scale(1.2);
+}
+
+}
+
+/* ===========================
+   🎁 GIFT BOX
+=========================== */
+
+.gift-box{
+
+position:relative;
+
+width:180px;
+height:180px;
+
+margin-top:40px;
+
+cursor:pointer;
+
+transition:.5s;
+
+}
+
+.gift-box:hover{
+
+transform:scale(1.08);
+
+}
+
+.gift-body{
+
+position:absolute;
+
+bottom:0;
+
+width:180px;
+
+height:120px;
+
+background:#ff4081;
+
+border-radius:10px;
+
+}
+
+.gift-lid{
+
+position:absolute;
+
+top:30px;
+
+width:180px;
+
+height:35px;
+
+background:#ec407a;
+
+border-radius:10px;
+
+z-index:5;
+
+transition:.8s;
+
+}
+
+.gift-ribbon-vertical{
+
+position:absolute;
+
+left:82px;
+
+width:16px;
+
+height:180px;
+
+background:white;
+
+z-index:6;
+
+}
+
+.gift-ribbon-horizontal{
+
+position:absolute;
+
+top:82px;
+
+width:180px;
+
+height:16px;
+
+background:white;
+
+z-index:6;
+
+}
+
+/* ===========================
+   📸 PHOTO SLIDER
+=========================== */
+
+.slider{
+
+margin-top:30px;
+
+width:340px;
+
+height:520px;
+
+overflow:hidden;
+
+border-radius:25px;
+
+box-shadow:0 0 30px hotpink;
+
+}
+
+.slider img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:1s;
+
+}
+
+/* ===========================
+   🎥 VIDEO
+=========================== */
+
+.video-slider video{
+
+width:350px;
+
+border-radius:20px;
+
+box-shadow:0 0 25px white;
+
+}
+
+/* ===========================
+   ❤️ FAMILY CARD
+=========================== */
+
+.family-card{
+
+width:90%;
+
+max-width:900px;
+
+padding:40px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(12px);
+
+border-radius:25px;
+
+box-shadow:0 0 25px rgba(255,255,255,.3);
+
+}
+
+.family-list{
+
+margin-top:20px;
+
+list-style:none;
+
+}
+
+.family-list li{
+
+font-size:24px;
+
+margin:12px 0;
+
+}
+
+/* ===========================
+   📱 MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.calligraphy{
+
+font-size:70px;
+
+}
+
+h1{
+
+font-size:36px;
+
+}
+
+h2{
+
+font-size:28px;
+
+}
+
+p{
+
+font-size:18px;
+
+}
+
+.slider{
+
+width:90%;
+
+height:420px;
+
+}
+
+.video-slider video{
+
+width:90%;
+
+}
+
+}
