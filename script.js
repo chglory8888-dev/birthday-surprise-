@@ -446,3 +446,39 @@ function grandCelebration(){
     createHearts();
 
 }
+    // Sparkle Creation ✨
+
+function createSparkles(){
+
+    let sparkle=document.createElement("div");
+
+    sparkle.className="sparkle";
+
+    sparkle.innerHTML="✨";
+
+
+    sparkle.style.left =
+    Math.random()*100+"vw";
+
+
+    sparkle.style.animationDuration =
+    (2+Math.random()*3)+"s";
+
+
+    document.body.appendChild(sparkle);
+
+
+    setTimeout(()=>{
+
+        sparkle.remove();
+
+    },5000);
+
+}
+
+
+setInterval(()=>{
+
+    createSparkles();
+
+},500);
