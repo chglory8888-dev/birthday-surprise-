@@ -631,3 +631,70 @@ transform:translateY(-60px) rotate(-10deg);
     }
 
 }
+/* Gift Box Animation */
+
+.gift-section {
+    text-align:center;
+    margin-top:50px;
+}
+
+
+.gift {
+    font-size:100px;
+    cursor:pointer;
+    animation: giftMove 1.5s infinite;
+}
+
+
+@keyframes giftMove {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+
+.final-screen {
+
+    display:none;
+    text-align:center;
+    padding:30px;
+    margin:30px auto;
+    width:80%;
+    border-radius:25px;
+    background:white;
+    animation: showFinal 2s ease;
+
+}
+
+
+.final-screen h1 {
+
+    color:#e91e63;
+    font-size:35px;
+
+}
+
+
+@keyframes showFinal {
+
+    from {
+        opacity:0;
+        transform:scale(0.5);
+    }
+
+    to {
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
