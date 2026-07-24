@@ -341,3 +341,108 @@ seconds+" Seconds";
 
 },1000);
 if(password === "27-07-2020"){
+    // Love Letter Open 💌
+
+function openLetter(){
+
+    document.getElementById("letter")
+    .style.display="block";
+
+    createHearts();
+
+}
+
+
+
+// Secret Password 🔐
+
+function checkPassword(){
+
+    let password =
+    document.getElementById("password").value;
+
+
+    if(password === "27-07-2020"){
+
+
+        document.getElementById("secretMessage").innerHTML =
+        "🎉 Secret Surprise Unlocked ❤️🎁";
+
+
+        document.getElementById("grandFinal")
+        .style.display="block";
+
+
+        createConfetti();
+        createHearts();
+
+
+    }
+    else{
+
+
+        document.getElementById("secretMessage").innerHTML =
+        "❌ Wrong Password";
+
+
+    }
+
+}
+
+
+
+
+
+// Photo Slideshow 📸
+
+let images = [
+
+"photo1.jpg",
+
+"photo2.jpg",
+
+"photo3.jpg"
+
+];
+
+
+let imageIndex = 0;
+
+
+setInterval(()=>{
+
+
+    imageIndex++;
+
+
+    if(imageIndex >= images.length){
+
+        imageIndex = 0;
+
+    }
+
+
+    document.getElementById("slideImage")
+    .src = images[imageIndex];
+
+
+},3000);
+
+
+
+
+
+
+// Grand Celebration 🎉
+
+function grandCelebration(){
+
+    document.getElementById("grandFinal")
+    .style.display="block";
+
+
+    createConfetti();
+
+    createHearts();
+
+}
