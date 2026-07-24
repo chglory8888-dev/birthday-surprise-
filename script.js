@@ -102,3 +102,18 @@ photos.forEach((photo,index)=>{
     photo.style.animationDelay = index + "s";
 
 });
+// Cake Cutting Effect
+
+function cutCake(){
+
+    let cake = document.querySelector(".cake");
+
+    cake.classList.add("cut");
+
+    document.getElementById("cakeMessage").innerHTML =
+    "🎉 Cake Cut Successfully ❤️🎂<br>Make a Beautiful Wish ✨";
+
+
+    createHearts();
+
+}
