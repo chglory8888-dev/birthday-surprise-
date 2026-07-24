@@ -747,3 +747,50 @@ button {
     cursor:pointer;
 
 }
+/* Confetti */
+
+.confetti {
+
+    position:fixed;
+    top:-10px;
+    font-size:25px;
+    animation: fall 4s linear forwards;
+    z-index:20;
+
+}
+
+
+@keyframes fall {
+
+    0% {
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    100% {
+        transform:translateY(100vh) rotate(360deg);
+        opacity:0;
+    }
+
+}
+
+
+/* Sparkle */
+
+.sparkle {
+
+    position:fixed;
+    font-size:30px;
+    animation:sparkleEffect 2s infinite;
+
+}
+
+
+@keyframes sparkleEffect {
+
+    50% {
+        transform:scale(1.5);
+        opacity:0.5;
+    }
+
+}
