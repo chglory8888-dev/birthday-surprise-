@@ -210,3 +210,133 @@ function startWebsite(){
     createHearts();
 
 }
+// Background Music 🎵
+
+function startMusic(){
+
+    let music = document.getElementById("music");
+
+    if(music){
+        music.play();
+    }
+
+}
+
+
+
+// Heart Floating Animation ❤️
+
+function createHearts(){
+
+    let heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML = "❤️";
+
+
+    heart.style.left = Math.random()*100 + "vw";
+
+    heart.style.fontSize =
+    (20 + Math.random()*30) + "px";
+
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },5000);
+
+}
+
+
+
+setInterval(()=>{
+
+    createHearts();
+
+},500);
+
+
+
+
+
+
+// Typing Message Effect 💌
+
+let message =
+"With Lots of Love ❤️ From Our Loving Family Members";
+
+
+let i = 0;
+
+
+function typingEffect(){
+
+    if(i < message.length){
+
+        document.getElementById("typing").innerHTML +=
+        message.charAt(i);
+
+        i++;
+
+        setTimeout(typingEffect,100);
+
+    }
+
+}
+
+
+typingEffect();
+
+
+
+
+
+
+// Birthday Countdown 🎂
+
+let birthday =
+new Date("August 15, 2026 00:00:00").getTime();
+
+
+
+setInterval(()=>{
+
+
+let now = new Date().getTime();
+
+
+let time = birthday - now;
+
+
+
+let days =
+Math.floor(time/(1000*60*60*24));
+
+
+let hours =
+Math.floor((time%(1000*60*60*24))/(1000*60*60));
+
+
+let minutes =
+Math.floor((time%(1000*60*60))/(1000*60));
+
+
+let seconds =
+Math.floor((time%(1000*60))/1000);
+
+
+
+document.getElementById("countdown").innerHTML =
+
+days+" Days ❤️ "+
+hours+" Hours "+
+minutes+" Minutes "+
+seconds+" Seconds";
+
+
+},1000);
