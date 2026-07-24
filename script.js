@@ -93,3 +93,12 @@ function fireworks(){
         },2000);
     }
 }
+// Memory Photo Animation
+
+let photos = document.querySelectorAll(".memory");
+
+photos.forEach((photo,index)=>{
+
+    photo.style.animationDelay = index + "s";
+
+});
