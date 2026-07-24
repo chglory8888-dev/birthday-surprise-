@@ -197,3 +197,16 @@ function finalCelebration(){
     createHearts();
 
 }
+// Open Website Button
+
+function startWebsite(){
+
+    document.getElementById("welcomeScreen")
+    .classList.add("hideWelcome");
+
+
+    startMusic();
+
+    createHearts();
+
+}
