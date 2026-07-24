@@ -117,3 +117,21 @@ function cutCake(){
     createHearts();
 
 }
+// Gift Opening Animation
+
+function openGift(){
+
+    let gift = document.querySelector(".gift");
+
+    gift.innerHTML = "🎉";
+
+    document.getElementById("giftMessage").innerHTML =
+    "Surprise Opened ❤️";
+
+
+    document.getElementById("finalMessage").style.display="block";
+
+
+    createHearts();
+
+}
