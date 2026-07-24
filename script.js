@@ -156,3 +156,44 @@ function celebration(){
     createHearts();
 
 }
+// Confetti Creation 🎊
+
+function createConfetti(){
+
+    let symbols = ["🎉","✨","❤️","🎂","🎁"];
+
+    for(let i=0; i<100; i++){
+
+        let confetti = document.createElement("div");
+
+        confetti.className="confetti";
+
+        confetti.innerHTML =
+        symbols[Math.floor(Math.random()*symbols.length)];
+
+        confetti.style.left =
+        Math.random()*100+"vw";
+
+        confetti.style.animationDuration =
+        (2+Math.random()*3)+"s";
+
+        document.body.appendChild(confetti);
+
+
+        setTimeout(()=>{
+            confetti.remove();
+        },5000);
+
+    }
+
+}
+
+
+// Run Celebration
+
+function finalCelebration(){
+
+    createConfetti();
+    createHearts();
+
+}
