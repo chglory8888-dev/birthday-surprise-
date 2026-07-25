@@ -948,6 +948,24 @@ opacity:0;
 
 
 }
+.next-hint{
+
+font-size:25px;
+
+animation:upDown 1s infinite;
+
+}
+
+
+@keyframes upDown{
+
+50%{
+
+transform:translateY(15px);
+
+}
+
+}
         
 
 
