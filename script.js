@@ -47,61 +47,92 @@ let balloonNumbers = [
 
 function createBalloons(){
 
-    let container =
-    document.getElementById("balloonContainer");
+let container=document.getElementById("balloonBouquet");
+
+container.innerHTML="";
 
 
-    container.innerHTML="";
+let numbers=[
+7,15,20,31,45,57,10,26
+];
 
 
-    balloonNumbers.forEach(num=>{
+// 50 empty balloons
+
+for(let i=0;i<50;i++){
+
+let div=document.createElement("div");
+
+div.className="balloonItem";
 
 
-        let balloon =
-        document.createElement("div");
+let balloon=document.createElement("div");
+
+balloon.className="balloon";
 
 
-        balloon.className="balloon";
+// every 6th balloon gets number
+
+if(i < 8){
+
+balloon.classList.add("number");
+
+balloon.innerHTML=numbers[i];
 
 
-        balloon.innerHTML=num;
+balloon.onclick=function(){
 
 
+if(numbers[i]===26){
 
-        balloon.onclick=function(){
-
-
-            if(num===26){
+document.getElementById("blastSound").play();
 
 
-                document.getElementById("balloonSection")
-                .classList.add("hidden");
+balloon.innerHTML="💥";
 
 
-                document.getElementById("chinnari")
-                .classList.remove("hidden");
+setTimeout(()=>{
+
+document.getElementById("balloonSection")
+.classList.add("hidden");
 
 
-            }
-
-            else{
-
-                balloon.style.opacity="0";
-
-            }
+document.getElementById("chinnari")
+.classList.remove("hidden");
 
 
-        };
-
-
-        container.appendChild(balloon);
-
-
-    });
+},700);
 
 
 }
 
+else{
+
+document.getElementById("wrongSound").play();
+
+}
+
+
+};
+
+
+}
+else{
+
+balloon.innerHTML="";
+
+}
+
+
+
+div.appendChild(balloon);
+
+container.appendChild(div);
+
+
+}
+
+}
 
 
 
