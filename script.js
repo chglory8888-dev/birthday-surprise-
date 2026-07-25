@@ -139,23 +139,6 @@ white,
 ${color},
 #400020
 )`;
-.balloon{
-
-transition:0.4s;
-
-}
-
-
-.balloon:hover{
-
-transform:
-scale(1.15)
-translateY(-10px);
-
-filter:
-brightness(1.4);
-
-}
 
 
 
