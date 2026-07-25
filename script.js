@@ -650,10 +650,6 @@ sound.play();
 
 // start fireworks
 
-createFireworks();
-
-
-}
 function createFireworks(){
 
 let area=document.getElementById("fireworks");
@@ -662,119 +658,39 @@ let area=document.getElementById("fireworks");
 setInterval(()=>{
 
 
-let spark=document.createElement("span");
+let burst=document.createElement("div");
+
+burst.className="firework-burst";
 
 
-spark.innerHTML="✨";
+burst.innerHTML="✨";
 
 
-spark.style.position="absolute";
-
-spark.style.left=Math.random()*100+"%";
-
-spark.style.top=Math.random()*80+"%";
-
-spark.style.fontSize=
-(20+Math.random()*40)+"px";
-
-
-area.appendChild(spark);
-
-
-
-setTimeout(()=>{
-
-spark.remove();
-
-},1500);
-
-
-
-},300);
-
-
-}
-function createFireworks(){
-
-let area=document.getElementById("fireworks");
-
-
-setInterval(()=>{
-
-
-let fire=document.createElement("div");
-
-
-fire.className="firework";
-
-
-fire.innerHTML="✨";
-
-
-fire.style.left=
+burst.style.left=
 Math.random()*90+"%";
 
 
-fire.style.top=
+burst.style.top=
 Math.random()*70+"%";
 
 
-fire.style.fontSize=
-(30+Math.random()*50)+"px";
+burst.style.fontSize=
+(40+Math.random()*50)+"px";
 
 
-area.appendChild(fire);
+area.appendChild(burst);
 
 
 
 setTimeout(()=>{
 
-fire.remove();
+burst.remove();
 
 },1500);
 
 
 
-},250);
+},500);
 
-
-}
-function createConfetti(){
-
-for(let i=0;i<50;i++){
-
-
-let confetti=document.createElement("span");
-
-
-confetti.innerHTML="✨";
-
-
-confetti.className="confetti";
-
-
-confetti.style.left=
-Math.random()*100+"%";
-
-
-confetti.style.top="50%";
-
-
-confetti.style.fontSize=
-(15+Math.random()*30)+"px";
-
-
-document.body.appendChild(confetti);
-
-
-
-setTimeout(()=>{
-
-confetti.remove();
-
-},2000);
-
-
-}
 
 }
