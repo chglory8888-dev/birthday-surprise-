@@ -177,7 +177,9 @@ margin:auto;
 
 position:absolute;
 
-animation:floatBalloon 4s infinite ease-in-out;
+animation:floatBalloon 4s ease-in-out infinite;
+
+transform-origin:bottom center;
 
 }
 
