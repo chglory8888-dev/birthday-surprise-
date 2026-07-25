@@ -1463,3 +1463,99 @@ font-size:35px;
 font-size:18px;
 
 }
+.cake-title{
+
+font-size:70px;
+
+color:#ffd700;
+
+text-shadow:
+
+0 0 20px gold,
+0 0 50px pink;
+
+}
+
+
+
+.cake-box{
+
+position:relative;
+
+margin:40px;
+
+}
+
+
+
+.cake{
+
+font-size:160px;
+
+animation:cakeFloat 3s infinite;
+
+filter:drop-shadow(0 0 25px pink);
+
+}
+
+
+
+.candles{
+
+font-size:50px;
+
+margin-top:-50px;
+
+animation:flame 1s infinite;
+
+}
+
+
+
+.wish-text{
+
+font-size:35px;
+
+color:white;
+
+text-shadow:0 0 20px pink;
+
+animation:textGlow 2s infinite;
+
+}
+
+
+
+@keyframes cakeFloat{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+
+
+@keyframes flame{
+
+50%{
+
+filter:brightness(1.8);
+
+}
+
+}
+
+
+
+@keyframes textGlow{
+
+50%{
+
+opacity:.6;
+
+}
+
+}
