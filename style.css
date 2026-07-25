@@ -2,30 +2,41 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
 }
 
 
 body{
 
     min-height:100vh;
-    background:linear-gradient(135deg,#ffe6f2,#fff0f5);
+
+    font-family:'Poppins',sans-serif;
+
+    color:white;
 
     text-align:center;
 
-    overflow-x:hidden;
+    background:
+    linear-gradient(
+    rgba(0,0,30,0.45),
+    rgba(0,0,30,0.65)
+    ),
+    url("background.jpg");
 
-    color:#333;
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
 
 }
 
 
 
+/* Sections */
+
 section{
 
     min-height:100vh;
-
-    padding:40px 20px;
 
     display:flex;
 
@@ -35,87 +46,46 @@ section{
 
     align-items:center;
 
-}
+    padding:30px;
 
+}
 
 
 .hidden{
 
-    display:none !important;
+    display:none;
 
 }
 
 
 
-/* Welcome Screen */
-
-#welcomeScreen{
-
-    background:linear-gradient(45deg,#ff9a9e,#fad0c4);
-
-}
-
-
+/* Welcome */
 
 .welcome-content{
 
-    animation:welcomeZoom 2s ease;
+    background:rgba(255,255,255,0.12);
+
+    padding:40px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(10px);
 
 }
 
 
+h1{
 
-.welcome-content h1{
-
-    font-size:55px;
-
-    color:#e91e63;
+    font-size:40px;
 
 }
 
 
-
-.welcome-content h2{
-
-    font-size:35px;
+h2{
 
     margin:15px;
 
 }
-
-
-
-.welcome-content p{
-
-    font-size:20px;
-
-}
-
-
-
-
-
-@keyframes welcomeZoom{
-
-    from{
-
-        transform:scale(0);
-
-        opacity:0;
-
-    }
-
-
-    to{
-
-        transform:scale(1);
-
-        opacity:1;
-
-    }
-
-}
-
 
 
 
@@ -125,25 +95,28 @@ section{
 
 button{
 
-    padding:15px 40px;
+    margin-top:25px;
+
+    padding:15px 35px;
 
     border:none;
 
-    border-radius:40px;
+    border-radius:30px;
 
-    font-size:20px;
-
-    font-weight:600;
-
-    cursor:pointer;
+    background:linear-gradient(
+    45deg,
+    #ff1493,
+    #ff69b4
+    );
 
     color:white;
 
-    background:linear-gradient(45deg,#ff1493,#ff69b4);
+    font-size:18px;
 
-    box-shadow:0 10px 25px rgba(255,20,147,.4);
+    cursor:pointer;
 
-    transition:.3s;
+    box-shadow:
+    0 0 15px pink;
 
 }
 
@@ -154,6 +127,72 @@ button:hover{
     transform:scale(1.1);
 
 }
+
+
+
+
+
+
+/* Chinnari Name Glow */
+
+
+.shine-name{
+
+    font-size:70px;
+
+    font-weight:700;
+
+    color:white;
+
+
+    text-shadow:
+
+    0 0 5px white,
+
+    0 0 15px #ff69b4,
+
+    0 0 30px #ff1493,
+
+    0 0 60px #ffd700;
+
+
+    animation:nameGlow 2s infinite alternate;
+
+}
+
+
+
+@keyframes nameGlow{
+
+
+from{
+
+text-shadow:
+
+0 0 10px white,
+
+0 0 20px pink,
+
+0 0 40px hotpink;
+
+}
+
+
+to{
+
+text-shadow:
+
+0 0 20px white,
+
+0 0 40px gold,
+
+0 0 80px pink;
+
+}
+
+
+}
+
 
 
 
@@ -171,27 +210,24 @@ button:hover{
 
     justify-content:center;
 
-    max-width:600px;
+    gap:20px;
 
 }
 
 
-
 .balloon{
 
-    width:85px;
+    width:80px;
 
-    height:105px;
+    height:100px;
+
+    background:
+
+    radial-gradient(circle at 30% 20%,
+    white,
+    #ff1493);
 
     border-radius:50%;
-
-    background:linear-gradient(45deg,#ff1493,#ff69b4);
-
-    color:white;
-
-    font-size:30px;
-
-    font-weight:bold;
 
     display:flex;
 
@@ -199,77 +235,35 @@ button:hover{
 
     align-items:center;
 
-    margin:15px;
+    color:white;
+
+    font-size:25px;
+
+    font-weight:bold;
 
     cursor:pointer;
 
-    position:relative;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    box-shadow:
 
-    animation:floatBalloon 3s infinite;
-
-}
+    0 0 20px pink;
 
 
-
-.balloon:after{
-
-    content:"";
-
-    position:absolute;
-
-    bottom:-25px;
-
-    width:2px;
-
-    height:30px;
-
-    background:#555;
+    animation:float 3s infinite;
 
 }
 
 
 
-.balloon:hover{
+@keyframes float{
 
-    transform:scale(1.15);
+50%{
 
-}
-
-
-
-@keyframes floatBalloon{
-
-    50%{
-
-        transform:translateY(-15px);
-
-    }
+transform:translateY(-20px);
 
 }
 
-
-
-
-
-
-
-/* Chinnari */
-
-
-.calligraphy{
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:80px;
-
-    color:#e91e63;
-
-    text-shadow:0 0 20px pink;
-
 }
-
 
 
 
@@ -281,27 +275,23 @@ button:hover{
 
 .cake{
 
-    font-size:130px;
+    font-size:120px;
 
-    cursor:pointer;
-
-    animation:cakeBounce 1.5s infinite;
+    animation:bounce 2s infinite;
 
 }
 
 
 
-@keyframes cakeBounce{
+@keyframes bounce{
 
-    50%{
+50%{
 
-        transform:translateY(-20px);
-
-    }
+transform:translateY(-20px);
 
 }
 
-
+}
 
 
 
@@ -312,30 +302,25 @@ button:hover{
 
 .gift{
 
-    font-size:130px;
+    font-size:120px;
 
     cursor:pointer;
 
-    animation:giftShake 1s infinite;
+    animation:shake 2s infinite;
 
 }
 
 
 
-@keyframes giftShake{
-
-    25%{
-
-        transform:rotate(10deg);
-
-    }
+@keyframes shake{
 
 
-    50%{
+50%{
 
-        transform:rotate(-10deg);
+transform:rotate(10deg);
 
-    }
+}
+
 
 }
 
@@ -345,338 +330,115 @@ button:hover{
 
 
 
-/* Gallery */
-
-
-.gallery{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-}
-
-
-
-.gallery img{
-
-    width:250px;
-
-    height:250px;
-
-    object-fit:cover;
-
-    border-radius:25px;
-
-    margin:15px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-
-    transition:.4s;
-
-}
-
-
-
-.gallery img:hover{
-
-    transform:scale(1.08);
-
-}
-
-
-
-
-
-
-
-/* Video */
-
-
-video{
-
-    border-radius:20px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-
-}
-
-
-
-
-
-
-
-/* Birthday Wishes */
-
-
-.birthday-title{
-
-    font-size:45px;
-
-}
-
-
-
-.birthday-title span{
-
-    color:#e91e63;
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:70px;
-
-}
-
-
-
-.birthday-message{
-
-    max-width:750px;
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:30px;
-
-    line-height:1.8;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-
-}
-
-
-
-
-
-
-/* Password */
-
-
-input{
-
-    padding:15px 25px;
-
-    border-radius:30px;
-
-    border:2px solid #ff1493;
-
-    font-size:18px;
-
-    outline:none;
-
-}
-
-
-
-
-
-
-/* Crackers */
-
-
-.cracker{
-
-    position:fixed;
-
-    top:40%;
-
-    left:45%;
-
-    font-size:60px;
-
-    animation:crackerZoom 2s;
-
-}
-
-
-
-@keyframes crackerZoom{
-
-    from{
-
-        transform:scale(0);
-
-    }
-
-    to{
-
-        transform:scale(1);
-
-    }
-
-}
-
-
-
-
-
-
-
-/* Final Message */
-
-
-#finalMessage h1{
-
-    font-size:55px;
-
-    color:#e91e63;
-
-}
-
-
-#finalMessage h2{
-
-    font-size:35px;
-
-    color:#ff1493;
-
-}
-
-
-
-#finalMessage p{
-
-    font-size:22px;
-
-    line-height:2;
-
-}
-
-
-
-
-
-
-
-/* Mobile */
-
-
-@media(max-width:600px){
-
-
-.welcome-content h1{
-
-    font-size:35px;
-
-}
-
-
-.welcome-content h2{
-
-    font-size:25px;
-
-}
-
-
-
-.calligraphy{
-
-    font-size:55px;
-
-}
-
-
-
-.balloon{
-
-    width:70px;
-
-    height:90px;
-
-    font-size:25px;
-
-}
-
-
-
-.birthday-title{
-
-    font-size:30px;
-
-}
-
-
-
-.birthday-title span{
-
-    font-size:45px;
-
-}
-
-
-
-.gallery img{
-
-    width:90%;
-
-}
-
-
-}
-/* Automatic Image Slider */
-.slider{
-
-    width:300px;
-    height:300px;
-    overflow:hidden;
-    margin:auto;
-
-}
+/* Image */
 
 
 .slider img{
 
-    width:100%;
-    height:100%;
+    width:300px;
+
+    height:400px;
 
     object-fit:cover;
 
-    border-radius:25px;
-
-    animation:slideImage 1s ease;
-
-}
+    border-radius:20px;
 
 
-@keyframes slideImage{
+    box-shadow:
 
-    from{
-
-        transform:translateX(100%);
-
-    }
-
-
-    to{
-
-        transform:translateX(0);
-
-    }
+    0 0 30px white;
 
 }
 
 
 
-@keyframes fadeImage{
 
-    from{
 
-        opacity:0;
 
-        transform:scale(1.1);
+/* Birthday title */
 
-    }
 
-    to{
+.birthday-title span{
 
-        opacity:1;
 
-        transform:scale(1);
+color:#ffd700;
 
-    }
+
+text-shadow:
+
+0 0 15px gold,
+
+0 0 30px pink;
+
 
 }
+
+
+
+
+
+
+/* Fireworks */
+
+
+#fireworks{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+}
+
+
+.spark{
+
+position:absolute;
+
+width:8px;
+
+height:8px;
+
+background:white;
+
+border-radius:50%;
+
+animation:explode 2s infinite;
+
+}
+
+
+
+@keyframes explode{
+
+
+0%{
+
+transform:scale(0);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:translateY(-200px) scale(5);
+
+opacity:0;
+
+}
+
+
+}    
+        
+
+
+
