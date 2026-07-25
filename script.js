@@ -148,3 +148,56 @@ function createConfetti(){
     },3000);
 
 }
+// మీ existing JavaScript code
+
+
+// Balloon Game 🎈
+
+let balloonNumbers = [3,15,57,20,31,10,26,45];
+
+
+function createBalloons(){
+
+    let container = document.getElementById("balloonContainer");
+
+
+    balloonNumbers.forEach(num=>{
+
+        let balloon = document.createElement("div");
+
+        balloon.className = "balloon";
+
+        balloon.innerHTML = num;
+
+
+        balloon.onclick = function(){
+
+            if(num === 26){
+
+                document.getElementById("balloonSection")
+                .style.display="none";
+
+
+                document.getElementById("chinnari")
+                .classList.remove("hidden");
+
+            }
+
+            else{
+
+                balloon.style.opacity="0";
+                balloon.style.transform="scale(0)";
+
+            }
+
+        };
+
+
+        container.appendChild(balloon);
+
+    });
+
+}
+
+
+createBalloons();
