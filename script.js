@@ -471,3 +471,48 @@ spark.remove();
 
 
 }
+function createFireworks(){
+
+let area=document.getElementById("fireworks");
+
+
+setInterval(()=>{
+
+
+let fire=document.createElement("div");
+
+
+fire.className="firework";
+
+
+fire.innerHTML="✨";
+
+
+fire.style.left=
+Math.random()*90+"%";
+
+
+fire.style.top=
+Math.random()*70+"%";
+
+
+fire.style.fontSize=
+(30+Math.random()*50)+"px";
+
+
+area.appendChild(fire);
+
+
+
+setTimeout(()=>{
+
+fire.remove();
+
+},1500);
+
+
+
+},250);
+
+
+}
