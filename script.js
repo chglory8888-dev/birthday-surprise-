@@ -340,7 +340,7 @@ seconds+" Seconds";
 
 
 },1000);
-if(password === "27-07-2020"){
+if(password === "26-07-2020"){
     // Love Letter Open 💌
 
 function openLetter(){
