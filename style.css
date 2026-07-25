@@ -605,6 +605,17 @@ animation:nameGlow 2s infinite alternate;
 
 
 }
+@media(max-width:600px){
+
+#finalMessage h2{
+
+font-size:70px;
+
+line-height:1.1;
+
+}
+
+}
         
 
 
