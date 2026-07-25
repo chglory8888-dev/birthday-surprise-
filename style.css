@@ -272,6 +272,13 @@ transform:scale(1.08);
 box-shadow:0 15px 35px rgba(255,20,147,.6);
 
 }
+button:hover{
+
+    transform:scale(1.1);
+
+    box-shadow:0 0 30px #ff1493;
+
+}
 
 /* =========================================
    Responsive
