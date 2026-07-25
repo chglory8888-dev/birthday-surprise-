@@ -278,8 +278,7 @@ let password =
 document.getElementById("password").value;
 
 
-
-if(password==="01-08-2025"){
+if(password==="26-07-2020"){
 
 
 document.getElementById("passwordSection")
