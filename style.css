@@ -609,36 +609,38 @@ box-shadow:0 0 40px pink;
 /* Final */
 
 
-#finalMessage h1{
-
-font-size:90px;
-
-color:#ffd700;
-
-text-shadow:0 0 40px gold;
-
-}
-
-
 #finalMessage h2{
 
 font-size:250px;
 
+font-weight:800;
+
 color:white;
 
-text-shadow:0 0 40px pink;
+
+text-shadow:
+
+0 0 20px white,
+0 0 50px pink,
+0 0 100px gold;
+
+
+animation:nameGlow 3s infinite;
 
 }
 
 
+@keyframes nameGlow{
 
+50%{
 
-.final-text{
+filter:brightness(1.8);
 
-font-size:30px;
+transform:scale(1.05);
 
 }
 
+}
 
 
 
@@ -648,66 +650,20 @@ font-size:30px;
 
 @media(max-width:600px){
 
+.big-name{
 
-.welcome-content h1{
-
-font-size:40px;
-
-}
-
-
-
-.shine-name{
-
-font-size:60px;
+font-size:65px;
 
 }
 
 
-#balloonBouquet{
+.final-text{
 
-transform:scale(.8);
-
-}
-
-
-
-.birthday-title{
-
-font-size:45px;
+font-size:18px;
 
 }
 
-
-.birthday-title span{
-
-font-size:60px;
-
 }
-
-
-.birthday-message{
-
-font-size:20px;
-
-}
-
-
-#finalMessage h2{
-
-font-size:70px;
-
-}
-
-
-#finalMessage h1{
-
-font-size:45px;
-
-}
-
-
-    }
 /* Final Birthday Screen */
 
 #finalMessage{
@@ -2013,6 +1969,15 @@ font-size:40px;
 .video-frame{
 
 padding:10px;
+
+}
+
+}
+@media(max-width:600px){
+
+#finalMessage h2{
+
+font-size:65px;
 
 }
 
