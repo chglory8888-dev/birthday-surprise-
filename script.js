@@ -403,36 +403,15 @@ let photoIndex = 0;
 
 let photoIndex = 0;
 
-
-setInterval(()=>{
-
-
-let img = document.getElementById("slideImage");
-
-
-img.style.transform="translateX(-100%)";
-
-
-setTimeout(()=>{
-
+setInterval(function(){
 
 photoIndex++;
 
-
 if(photoIndex >= photos.length){
-
-photoIndex=0;
-
+photoIndex = 0;
 }
 
-
-img.src = photos[photoIndex];
-
-
-img.style.transform="translateX(0)";
-
-
-},500);
-
+document.getElementById("slideImage").src = photos[photoIndex];
 
 },3000);
+
