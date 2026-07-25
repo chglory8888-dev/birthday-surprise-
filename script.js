@@ -1,32 +1,48 @@
-// Background Music 🎵
+// =======================
+// Start Surprise
+// =======================
+
+function startGame(){
+
+    document.getElementById("welcomeScreen")
+    .classList.add("hidden");
+
+    document.getElementById("balloonSection")
+    .classList.remove("hidden");
+
+    createBalloons();
+
+}
+
+
+
+
+// =======================
+// Background Music
+// =======================
 
 function startMusic(){
 
     let music = document.getElementById("bgMusic");
 
-    music.play();
+    if(music){
+
+        music.play();
+
+    }
 
 }
 
 
 
-// Start Surprise ❤️
 
-function startWebsite(){
+// =======================
+// Balloons
+// =======================
 
-    document.getElementById("welcomeScreen").style.display="none";
-
-    document.getElementById("mainContent").style.display="block";
-
-    startMusic();
-
-}
-
-
-
-// Balloons 🎈
-
-let balloonNumbers = [3,15,57,20,31,10,26,45];
+let balloonNumbers = [
+3,15,57,20,31,10,26,45
+];
 
 
 function createBalloons(){
@@ -35,30 +51,31 @@ function createBalloons(){
     document.getElementById("balloonContainer");
 
 
+    container.innerHTML="";
+
+
     balloonNumbers.forEach(num=>{
 
 
-        let balloon = document.createElement("div");
+        let balloon =
+        document.createElement("div");
 
 
         balloon.className="balloon";
 
 
-        // Number on balloon
-
-        balloon.innerHTML = num;
+        balloon.innerHTML=num;
 
 
 
         balloon.onclick=function(){
 
 
-
-            if(num === 26){
+            if(num===26){
 
 
                 document.getElementById("balloonSection")
-                .style.display="none";
+                .classList.add("hidden");
 
 
                 document.getElementById("chinnari")
@@ -69,11 +86,7 @@ function createBalloons(){
 
             else{
 
-
-                balloon.style.transform="scale(0)";
-
                 balloon.style.opacity="0";
-
 
             }
 
@@ -84,126 +97,59 @@ function createBalloons(){
         container.appendChild(balloon);
 
 
-
     });
 
 
 }
 
 
-createBalloons();
 
 
 
 
 
-
-// Hii Chinnari ➜ Cake 🎂
+// =======================
+// Cake
+// =======================
 
 function showCake(){
 
-
     document.getElementById("chinnari")
-    .style.display="none";
+    .classList.add("hidden");
 
 
     document.getElementById("cakeSection")
     .classList.remove("hidden");
 
-
 }
 
 
-
-
-
-
-
-// Candle Blow 🕯️
 
 function blowCandle(){
 
-
-    document.getElementById("cakeMessage")
-    .innerHTML =
-    "🎉❤️ HAPPY BIRTHDAY SHANVITHA PRIYA ❤️🎉";
-
-
-    createCrackers();
-
-
-
-    setTimeout(()=>{
-
-
-        document.getElementById("cakeSection")
-        .style.display="none";
-
-
-        document.getElementById("giftSection")
-        .classList.remove("hidden");
-
-
-    },3000);
-
-
-
-}
-
-
-
-
-
-
-
-// Crackers 🎆
-
-function createCrackers(){
-
-
-    let cracker=document.createElement("div");
-
-
-    cracker.innerHTML="🎆✨🎇";
-
-
-    cracker.style.position="fixed";
-
-    cracker.style.top="40%";
-
-    cracker.style.left="40%";
-
-    cracker.style.fontSize="60px";
-
-
-    document.body.appendChild(cracker);
-
-
-
-    setTimeout(()=>{
-
-
-        cracker.remove();
-
-
-    },3000);
-
-
-}
-
-
-
-
-
-
-
-// Gift Open 🎁
-
-function openGift(){
+    document.getElementById("cakeSection")
+    .classList.add("hidden");
 
 
     document.getElementById("giftSection")
-    .style.display="none";
+    .classList.remove("hidden");
+
+
+}
+
+
+
+
+
+
+// =======================
+// Gift
+// =======================
+
+function openGift(){
+
+    document.getElementById("giftSection")
+    .classList.add("hidden");
 
 
     document.getElementById("memorySection")
@@ -218,153 +164,12 @@ function openGift(){
 
 
 
-// Images ➜ Wishes 📸
+// =======================
+// 20 Images Slider
+// =======================
 
-function showWishes(){
 
-
-    document.getElementById("memorySection")
-    .style.display="none";
-
-
-    document.getElementById("wishSection")
-    .classList.remove("hidden");
-
-
-}
-
-
-
-
-
-
-
-
-// Wishes ➜ Password 🔐
-
-function showPassword(){
-
-document.getElementById("passwordSection")
-.classList.remove("hidden");
-
-}
-
-
-
-
-
-
-
-// Password Check 🔐
-
-function checkPassword(){
-
-
-    let password =
-    document.getElementById("password").value;
-
-
-
-    if(password === "26-07-2020"){
-
-
-        document.getElementById("passwordSection")
-        .style.display="none";
-
-
-        document.getElementById("videoSection")
-        .classList.remove("hidden");
-
-
-    }
-
-
-    else{
-
-
-        document.getElementById("secretMessage")
-        .innerHTML =
-        "❌ Wrong Password";
-
-
-    }
-
-
-}
-
-
-
-
-
-
-
-
-// Video & Music Control 🎥🎵
-
-window.onload=function(){
-
-
-let video =
-document.getElementById("birthdayVideo");
-
-
-let music =
-document.getElementById("bgMusic");
-
-
-
-if(video){
-
-
-video.addEventListener("play",()=>{
-
-
-    music.pause();
-
-
-});
-
-
-
-video.addEventListener("ended",()=>{
-
-
-    music.play();
-
-
-});
-
-
-}
-
-
-
-};
-
-
-
-
-
-
-
-
-// Video ➜ Final ❤️
-
-function showFinal(){
-
-
-    document.getElementById("videoSection")
-    .style.display="none";
-
-
-    document.getElementById("finalMessage")
-    .classList.remove("hidden");
-
-
-}
-// Automatic Photo Slider 📸
-
-let photos = [
+let photos=[
 
 "IMG20250801125626.jpg",
 "IMG20250801130030.jpg",
@@ -383,55 +188,195 @@ let photos = [
 "IMG20251004182706.jpg",
 "IMG20251207194247.jpg",
 "Snapchat-1511237649.jpg",
-"Snapchat-974702302.jpg"
+"Snapchat-974702302.jpg",
+"IMG20250809123456.jpg",
+"IMG20250810123456.jpg"
 
 ];
 
 
-let photoIndex = 0;
+let photoIndex=0;
 
 
-let photoIndex = 0;
 
 setInterval(function(){
 
+
+let image =
+document.getElementById("slideImage");
+
+
+if(image){
+
+
 photoIndex++;
 
+
 if(photoIndex >= photos.length){
-photoIndex = 0;
+
+photoIndex=0;
+
 }
 
-document.getElementById("slideImage").src = photos[photoIndex];
+
+image.src=photos[photoIndex];
+
+
+}
+
 
 },3000);
-// Password check code
-function checkPassword(){
-
-    let pass = document.getElementById("password").value;
-
-    if(pass=="DD-MM-YEAR"){
-
-        document.getElementById("passwordSection")
-        .classList.add("hidden");
-
-        document.getElementById("videoSection")
-        .classList.remove("hidden");
-
-    }
-
-}
 
 
-// Final message open
 
-function showFinal(){
 
-    document.getElementById("videoSection")
+
+
+
+// =======================
+// Wishes
+// =======================
+
+function showWishes(){
+
+    document.getElementById("memorySection")
     .classList.add("hidden");
 
 
-    document.getElementById("finalMessage")
+    document.getElementById("wishSection")
     .classList.remove("hidden");
 
 }
+
+
+
+
+
+
+
+// =======================
+// Password
+// =======================
+
+function showPassword(){
+
+    document.getElementById("wishSection")
+    .classList.add("hidden");
+
+
+    document.getElementById("passwordSection")
+    .classList.remove("hidden");
+
+}
+
+
+
+function checkPassword(){
+
+
+let password =
+document.getElementById("password").value;
+
+
+
+if(password==="01-08-2025"){
+
+
+document.getElementById("passwordSection")
+.classList.add("hidden");
+
+
+document.getElementById("videoSection")
+.classList.remove("hidden");
+
+
+}
+
+else{
+
+
+document.getElementById("secretMessage")
+.innerHTML="Wrong Password ❌";
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+// =======================
+// Final + Fireworks
+// =======================
+
+function showFinal(){
+
+
+document.getElementById("videoSection")
+.classList.add("hidden");
+
+
+document.getElementById("finalMessage")
+.classList.remove("hidden");
+
+
+
+let sound =
+document.getElementById("fireworkSound");
+
+
+if(sound){
+
+sound.play();
+
+}
+
+
+createFireworks();
+
+
+}
+
+
+
+
+
+function createFireworks(){
+
+
+let box =
+document.getElementById("fireworks");
+
+
+
+for(let i=0;i<50;i++){
+
+
+let spark =
+document.createElement("span");
+
+
+spark.className="spark";
+
+
+spark.style.left =
+Math.random()*100+"%";
+
+
+spark.style.top =
+Math.random()*80+"%";
+
+
+box.appendChild(spark);
+
+
+}
+
+
+        }
 
