@@ -372,5 +372,37 @@ function showFinal(){
 
 
 }
+// Automatic Photo Slider 📸
+
+let photos = [
+
+"IMG20250801125626.jpg",
+"photo1.jpg",
+"photo2.jpg",
+"photo3.jpg"
+
+];
+
+
+let photoIndex = 0;
+
+
+setInterval(function(){
+
+
+    photoIndex++;
+
+
+    if(photoIndex >= photos.length){
+
+        photoIndex = 0;
+
+    }
+
+
+    document.getElementById("slideImage").src = photos[photoIndex];
+
+
+},3000);
 
     
