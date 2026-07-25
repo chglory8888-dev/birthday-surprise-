@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,9 +9,12 @@
 
 <title>Happy Birthday Shanvitha Priya ❤️</title>
 
+
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -30,23 +32,46 @@
 
 
 
+<!-- Balloon Sounds -->
 
-<!-- Welcome -->
+<audio id="wrongSound">
+
+<source src="tupuk.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<audio id="blastSound">
+
+<source src="balloon-pop.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+
+
+<!-- Welcome Screen -->
 
 <section id="welcomeScreen">
 
+
 <div class="welcome-content">
+
 
 <h1>❤️ Welcome ❤️</h1>
 
+
 <h2>Birthday Surprise</h2>
+
 
 <p>
 A Special Gift Full of Love 🎁
 </p>
 
 
-<button onclick="startGame(); startMusic();">
+
+<button onclick="startGame()">
 
 Open Surprise ✨
 
@@ -54,6 +79,7 @@ Open Surprise ✨
 
 
 </div>
+
 
 </section>
 
@@ -63,18 +89,23 @@ Open Surprise ✨
 
 
 
-<!-- Balloons -->
+<!-- Balloon Game -->
 
 <section id="balloonSection" class="hidden">
 
-<h1>🎈 Find The Special Balloon 🎈</h1>
 
-<p>Choose the lucky balloon ❤️</p>
+<h1>
+🎈 Find The Special Balloon 🎈
+</h1>
 
 
-<div id="balloonBouquet">
+<p>
+Choose the lucky balloon ❤️
+</p>
 
-</div>
+
+
+<div id="balloonBouquet"></div>
 
 
 <div class="ribbon">
@@ -85,30 +116,6 @@ Open Surprise ✨
 </section>
 
 
-<div id="balloonBouquet">
-
-<div class="balloonItem"><div class="balloon">🎈</div></div>
-<div class="balloonItem"><div class="balloon">🎈</div></div>
-<div class="balloonItem"><div class="balloon">🎈</div></div>
-<div class="balloonItem"><div class="balloon">🎈</div></div>
-
-<div class="balloonItem"><div class="balloon number">7</div></div>
-<div class="balloonItem"><div class="balloon">🎈</div></div>
-
-<div class="balloonItem"><div class="balloon number">15</div></div>
-<div class="balloonItem"><div class="balloon">🎈</div></div>
-
-<div class="balloonItem"><div class="balloon number">26</div></div>
-
-<div class="balloonItem"><div class="balloon">🎈</div></div>
-
-</div>
-
-
-</section>
-
-
-
 
 
 
@@ -116,33 +123,35 @@ Open Surprise ✨
 
 <!-- Chinnari -->
 
+
 <section id="chinnari" class="hidden">
 
 
-<h2>✨ Hii ✨</h2>
-
-
-<h1 class="shine-name">
-
-✨ Chinnari ❤️ ✨
-
+<h1>
+✨ Hii ✨
 </h1>
 
 
+<h2 class="shine-name">
+
+Chinnari ❤️
+
+</h2>
+
+
 <p>
-A Special Surprise is Waiting for You ❤️
+A Special Surprise is Waiting For You ❤️
 </p>
 
 
 <button onclick="showCake()">
 
-Next ➜ 🎂
+Next 🎂
 
 </button>
 
 
 </section>
-
 
 
 
@@ -155,7 +164,9 @@ Next ➜ 🎂
 <section id="cakeSection" class="hidden">
 
 
-<h1>🎂 Happy Birthday 🎂</h1>
+<h1>
+🎂 Happy Birthday 🎂
+</h1>
 
 
 <div class="cake">
@@ -163,11 +174,6 @@ Next ➜ 🎂
 🎂
 
 </div>
-
-
-<p>
-Make a Wish ❤️
-</p>
 
 
 <button onclick="blowCandle()">
@@ -185,27 +191,26 @@ Make a Wish ❤️
 
 
 
-
 <!-- Gift -->
 
 <section id="giftSection" class="hidden">
 
 
-<h1>🎁 Special Gift For You 🎁</h1>
+<h1>
+🎁 Special Gift For You 🎁
+</h1>
 
 
-<div class="gift">
+<div class="gift" onclick="openGift()">
 
 🎁
 
 </div>
 
 
-<button onclick="openGift()">
-
-Open Gift ❤️
-
-</button>
+<p>
+Click Gift Box ❤️
+</p>
 
 
 </section>
@@ -216,8 +221,8 @@ Open Gift ❤️
 
 
 
+<!-- Photos -->
 
-<!-- Memories -->
 
 <section id="memorySection" class="hidden">
 
@@ -234,6 +239,9 @@ Open Gift ❤️
 
 
 </div>
+
+
+
 <div class="next-hint">
 
 👇 Tap Next
@@ -256,23 +264,24 @@ Next 💌
 
 
 
-
 <!-- Wishes -->
+
 
 <section id="wishSection" class="hidden">
 
 
 <h1 class="birthday-title">
 
-🎉 Happy Birthday 
+🎉 Happy Birthday 🎉
+
+<br>
 
 <span>
 
-Shanvitha Priya
+Shanvitha Priya ❤️
 
 </span>
 
-🎉
 
 </h1>
 
@@ -288,18 +297,13 @@ Shanvitha Priya
 
 <p>
 May your special day be filled with happiness,
-love, laughter and beautiful memories. ✨
+love, laughter and beautiful memories.
 </p>
 
 
 <p>
 May God bless you with good health,
 success and a bright future. 🙏
-</p>
-
-
-<p>
-Keep smiling, keep shining and keep following your dreams ❤️
 </p>
 
 
@@ -322,20 +326,21 @@ Secret Surprise 🔐
 
 
 
-
 <!-- Password -->
+
 
 <section id="passwordSection" class="hidden">
 
 
-<h2>
+<h1>
 🔐 Secret Surprise
-</h2>
+</h1>
+
 
 
 <input id="password"
 type="password"
-placeholder="Enter DD-MM-YEAR">
+placeholder="Enter DD-MM-YYYY">
 
 
 
@@ -357,24 +362,22 @@ Unlock 🎁
 
 
 
-
 <!-- Video -->
+
 
 <section id="videoSection" class="hidden">
 
 
 <h1>
-
 🎥 Special Birthday Video ❤️
-
 </h1>
 
 
 
-<video id="birthdayVideo" width="320" controls>
+<video id="birthdayVideo" width="90%" controls>
 
 
-<source src="video1.mp4" type="video/mp4">
+<source src="InShot_20260724_174422011.mp4" type="video/mp4">
 
 
 </video>
@@ -382,6 +385,7 @@ Unlock 🎁
 
 
 <br><br>
+
 
 
 <button onclick="showFinal()">
@@ -399,13 +403,14 @@ Next ❤️
 
 
 
-
 <!-- Final Message -->
+
 
 <section id="finalMessage" class="hidden">
 
 
 <div id="fireworks"></div>
+
 
 
 <h1>
@@ -423,34 +428,23 @@ Shanvitha Priya ❤️
 
 
 
+<div class="final-text">
+
+
 <p>
-
 With Lots of Love From Our Loving Family Members ❤️
-
 </p>
-  <audio id="fireworkSound">
-
-<source src="fireworks.mp3" type="audio/mpeg">
-
-</audio>
-
-
-</section>
-
 
 
 <p>
 
 👨‍👩‍👧‍👦 Mom & Dad ❤️
-
 <br><br>
 
 👵 Grandparents ❤️
-
 <br><br>
 
 👩 Your Loving Attha ❤️
-
 <br><br>
 
 👫 Brothers & Sisters ❤️
@@ -459,20 +453,14 @@ With Lots of Love From Our Loving Family Members ❤️
 
 
 
-<h2>
+<h3>
 
 🙏 May God Bless You Always 🙏
 
-</h2>
+</h3>
 
 
-
-<audio id="fireworkSound">
-
-<source src="fireworks.mp3" type="audio/mpeg">
-
-</audio>
-
+</div>
 
 
 </section>
@@ -488,7 +476,5 @@ With Lots of Love From Our Loving Family Members ❤️
 
 </body>
 
+
 </html>
-
-
-
