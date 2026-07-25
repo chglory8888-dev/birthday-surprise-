@@ -29,19 +29,16 @@ createBalloons();
 
 function startMusic(){
 
-let music=document.getElementById("bgMusic");
+let music =
+document.getElementById("bgMusic");
 
-music.volume=0.5;
 
-music.play()
-.catch(()=>{
+music.volume = 0.5;
 
-console.log("Music waiting");
 
-});
+music.play();
 
 }
-
 
 
 
