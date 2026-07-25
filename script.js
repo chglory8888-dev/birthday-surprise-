@@ -502,4 +502,41 @@ balloon.style.opacity="0";
 
 
 });
+function popEffect(balloon){
+
+for(let i=0;i<20;i++){
+
+let particle=document.createElement("span");
+
+particle.className="particle";
+
+
+particle.style.left=
+balloon.offsetLeft+"px";
+
+
+particle.style.top=
+balloon.offsetTop+"px";
+
+
+document.body.appendChild(particle);
+
+
+
+setTimeout(()=>{
+
+particle.remove();
+
+},1000);
+
+
+}
+
+
+balloon.style.transform="scale(0)";
+
+balloon.style.opacity="0";
+
+
+}
 
