@@ -335,21 +335,19 @@ transform:rotate(10deg);
 
 .slider img{
 
-    width:300px;
+    width:90vw;
 
-    height:400px;
+    max-width:600px;
 
-    object-fit:cover;
+    height:auto;
+
+    max-height:80vh;
+
+    object-fit:contain;
 
     border-radius:20px;
 
-
-    box-shadow:
-
-    0 0 30px white;
-
 }
-
 
 
 
