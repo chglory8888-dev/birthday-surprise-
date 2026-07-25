@@ -202,15 +202,21 @@ text-shadow:
 /* Balloons */
 
 
-#balloonContainer{
+#balloonBouquet{
 
-    display:flex;
+display:flex;
 
-    flex-wrap:wrap;
+justify-content:center;
 
-    justify-content:center;
+align-items:flex-end;
 
-    gap:20px;
+flex-wrap:wrap;
+
+width:350px;
+
+margin:auto;
+
+gap:5px;
 
 }
 
