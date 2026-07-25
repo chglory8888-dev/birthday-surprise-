@@ -1136,10 +1136,59 @@ inset -15px -25px 30px rgba(0,0,0,.35),
 transition:.3s;
 
 }
+    .balloon::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-130px;
+
+left:50%;
+
+width:2px;
+
+height:130px;
+
+background:linear-gradient(
+white,
+rgba(255,255,255,0)
+);
+
+    }
 
 
 .balloon:hover{
 
 transform:scale(1.15);
+
+}
+    .balloon-knot{
+
+position:absolute;
+
+bottom:40px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:80px;
+
+filter:drop-shadow(0 0 15px pink);
+
+animation:knotGlow 2s infinite;
+
+}
+
+
+
+@keyframes knotGlow{
+
+50%{
+
+transform:translateX(-50%) scale(1.15);
+
+}
 
 }
