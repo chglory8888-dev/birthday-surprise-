@@ -7,13 +7,14 @@
 
 function startGame(){
 
-document.getElementById("welcomeScreen").classList.add("hidden");
+alert("Start Game Working");
 
 
-document.getElementById("balloonSection").classList.remove("hidden");
+document.getElementById("welcomeScreen").style.display="none";
 
 
-createBalloons();
+document.getElementById("balloonSection").style.display="block";
+
 
 }
 
