@@ -727,3 +727,26 @@ transform:translateY(0);
 }
 
 }
+@media(max-width:600px){
+
+#finalMessage h1{
+
+font-size:45px;
+
+}
+
+
+#finalMessage h2{
+
+font-size:65px;
+
+}
+
+
+.final-text{
+
+font-size:18px;
+
+}
+
+}
