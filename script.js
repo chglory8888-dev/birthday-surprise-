@@ -417,3 +417,43 @@ document.getElementById("finalMessage")
 
 
 }
+function createFireworks(){
+
+let area=document.getElementById("fireworks");
+
+
+setInterval(()=>{
+
+
+let spark=document.createElement("span");
+
+
+spark.innerHTML="✨";
+
+
+spark.style.position="absolute";
+
+spark.style.left=Math.random()*100+"%";
+
+spark.style.top=Math.random()*80+"%";
+
+spark.style.fontSize=
+(20+Math.random()*40)+"px";
+
+
+area.appendChild(spark);
+
+
+
+setTimeout(()=>{
+
+spark.remove();
+
+},1500);
+
+
+
+},300);
+
+
+}
