@@ -1385,3 +1385,81 @@ transform:scale(.75);
 }
 
 }
+.balloon-title{
+
+font-size:55px;
+
+color:#ffd700;
+
+text-shadow:
+
+0 0 15px white,
+
+0 0 40px gold,
+
+0 0 70px pink;
+
+
+animation:titleGlow 2s infinite;
+
+}
+
+
+
+.balloon-subtitle{
+
+font-size:28px;
+
+color:white;
+
+line-height:1.6;
+
+
+text-shadow:
+
+0 0 15px pink;
+
+
+animation:fadeText 3s infinite;
+
+}
+
+
+
+@keyframes titleGlow{
+
+
+50%{
+
+filter:brightness(1.6);
+
+transform:scale(1.05);
+
+}
+
+}
+
+
+
+@keyframes fadeText{
+
+
+50%{
+
+opacity:.6;
+
+}
+
+}
+.balloon-title{
+
+font-size:35px;
+
+}
+
+
+.balloon-subtitle{
+
+font-size:18px;
+
+}
