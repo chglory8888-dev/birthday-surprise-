@@ -1559,3 +1559,65 @@ opacity:.6;
 }
 
 }
+.gift-title{
+
+font-size:70px;
+
+color:#ffd700;
+
+text-shadow:
+
+0 0 20px gold,
+0 0 50px pink;
+
+}
+
+
+.gift-box{
+
+font-size:160px;
+
+cursor:pointer;
+
+animation:giftShake 2s infinite;
+
+filter:drop-shadow(0 0 30px pink);
+
+}
+
+
+
+.gift-text{
+
+font-size:35px;
+
+animation:textGlow 2s infinite;
+
+}
+
+
+
+@keyframes giftShake{
+
+
+0%,100%{
+
+transform:rotate(0deg);
+
+}
+
+
+25%{
+
+transform:rotate(-10deg);
+
+}
+
+
+75%{
+
+transform:rotate(10deg);
+
+}
+
+}
