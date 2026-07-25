@@ -379,6 +379,13 @@ document.getElementById("cakeSection")
 
 function blowCandle(){
 
+document.querySelector(".candles").innerHTML="";
+
+document.querySelector(".wish-text").innerHTML=
+"✨ Your Wish Will Come True ❤️";
+
+
+setTimeout(()=>{
 
 document.getElementById("cakeSection")
 .classList.add("hidden");
@@ -388,8 +395,9 @@ document.getElementById("giftSection")
 .classList.remove("hidden");
 
 
-}
+},2000);
 
+}
 
 
 
