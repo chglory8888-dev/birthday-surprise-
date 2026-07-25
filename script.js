@@ -267,7 +267,7 @@ setInterval(()=>{
 photoIndex++;
 
 
-if(photoIndex>=photos.length){
+if(photoIndex >= photos.length){
 
 photoIndex=0;
 
@@ -275,12 +275,27 @@ photoIndex=0;
 
 
 
-document.getElementById("slideImage")
-.src=photos[photoIndex];
+let image=document.getElementById("slideImage");
 
 
-},3000);
+image.style.opacity=0;
 
+
+
+setTimeout(()=>{
+
+
+image.src=photos[photoIndex];
+
+
+image.style.opacity=1;
+
+
+},500);
+
+
+
+},4000);
 
 
 }
