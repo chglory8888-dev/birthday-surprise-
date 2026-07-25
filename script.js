@@ -511,3 +511,56 @@ function checkPassword(){
     }
 
 }
+    // Sparkle Effect ✨
+
+function createSparkle(){
+
+    let sparkle = document.createElement("div");
+
+    sparkle.className = "sparkle";
+
+    sparkle.innerHTML = "✨";
+
+
+    sparkle.style.left =
+    Math.random()*100 + "vw";
+
+
+    sparkle.style.animationDuration =
+    (3 + Math.random()*3) + "s";
+
+
+    document.body.appendChild(sparkle);
+
+
+
+    setTimeout(()=>{
+
+        sparkle.remove();
+
+    },6000);
+
+}
+
+
+
+setInterval(()=>{
+
+    createSparkle();
+
+},500);
+
+
+
+
+// Final Celebration Button 🎉
+
+function finalCelebration(){
+
+    createHearts();
+
+    createConfetti();
+
+    createSparkle();
+
+}
