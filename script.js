@@ -60,26 +60,27 @@ let numbers=[
 ];
 
 
-// create 50 balloons
+// Create Balloon Bouquet
 
-for(let i=0;i<50;i++){
+function createBalloons(){
 
+let box = document.getElementById("balloonBouquet");
 
-let item=document.createElement("div");
-
-item.className="balloonItem";
-
+box.innerHTML = "";
 
 
-let balloon=document.createElement("div");
+let numbers = [
+7,15,20,31,45,57,10,26
+];
 
-balloon.className="balloon";
+
+// shuffle numbers
+
+numbers.sort(()=>Math.random()-0.5);
 
 
 
-// positions
-
-let positions=[
+let positions = [
 
 [180,20],
 [90,70],
@@ -93,16 +94,176 @@ let positions=[
 ];
 
 
+
+// create 50 balloons
+
+for(let i=0;i<50;i++){
+
+
+let item = document.createElement("div");
+
+item.className="balloonItem";
+
+
+
+let balloon = document.createElement("div");
+
+balloon.className="balloon";
+
+
+
+
+// Position
+
 if(i<8){
 
-item.style.left=positions[i][0]+"px";
+item.style.left = positions[i][0]+"px";
 
-item.style.top=positions[i][1]+"px";
+item.style.top = positions[i][1]+"px";
+
 
 }
 
 else{
 
+
+item.style.left = 
+(50 + Math.random()*350)+"px";
+
+
+item.style.top =
+(20 + Math.random()*330)+"px";
+
+
+}
+
+
+
+
+// Number balloons
+
+if(i<8){
+
+
+balloon.innerHTML="?";
+
+
+
+let value = numbers[i];
+
+
+
+balloon.onclick=function(){
+
+
+
+if(value === 26){
+
+
+
+let sound =
+document.getElementById("blastSound");
+
+
+if(sound){
+
+sound.play();
+
+}
+
+
+
+balloon.innerHTML="💥";
+
+
+balloon.classList.add("pop");
+
+
+
+setTimeout(function(){
+
+
+
+document.getElementById("balloonSection")
+.classList.add("hidden");
+
+
+
+document.getElementById("chinnari")
+.classList.remove("hidden");
+
+
+
+},1000);
+
+
+
+}
+
+
+
+else{
+
+
+let wrong =
+document.getElementById("wrongSound");
+
+
+if(wrong){
+
+wrong.play();
+
+}
+
+
+
+balloon.innerHTML="❌";
+
+
+
+setTimeout(function(){
+
+balloon.innerHTML="?";
+
+
+},800);
+
+
+
+}
+
+
+
+};
+
+
+}
+
+else{
+
+
+// Empty balloons
+
+balloon.innerHTML="";
+
+
+}
+
+
+
+
+item.appendChild(balloon);
+
+
+box.appendChild(item);
+
+
+
+}
+
+
+
+}
 item.style.left=(100+Math.random()*250)+"px";
 
 item.style.top=(50+Math.random()*300)+"px";
