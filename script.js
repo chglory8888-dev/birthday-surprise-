@@ -10,7 +10,7 @@ function startMusic(){
 
 
 
-// Welcome Start
+// Start Surprise ❤️
 
 function startGame(){
 
@@ -22,11 +22,13 @@ function startGame(){
     .classList.remove("hidden");
 
 
+    startMusic();
+
 }
 
 
 
-// Balloon Game 🎈
+// Balloons 🎈
 
 let balloonNumbers = [3,15,57,20,31,10,26,45];
 
@@ -46,11 +48,14 @@ function createBalloons(){
         balloon.className="balloon";
 
 
-        balloon.innerHTML=num;
+        // Number on balloon
+
+        balloon.innerHTML = num;
 
 
 
         balloon.onclick=function(){
+
 
 
             if(num === 26){
@@ -71,7 +76,6 @@ function createBalloons(){
 
                 balloon.style.transform="scale(0)";
 
-
                 balloon.style.opacity="0";
 
 
@@ -82,6 +86,7 @@ function createBalloons(){
 
 
         container.appendChild(balloon);
+
 
 
     });
@@ -97,7 +102,7 @@ createBalloons();
 
 
 
-// Show Cake 🎂
+// Hii Chinnari ➜ Cake 🎂
 
 function showCake(){
 
@@ -118,17 +123,18 @@ function showCake(){
 
 
 
-// Blow Candle 🕯️
+// Candle Blow 🕯️
 
 function blowCandle(){
 
 
     document.getElementById("cakeMessage")
     .innerHTML =
-    "🎉❤️ HAPPY BIRTHDAY ❤️🎉";
+    "🎉❤️ HAPPY BIRTHDAY SHANVITHA PRIYA ❤️🎉";
 
 
     createCrackers();
+
 
 
     setTimeout(()=>{
@@ -145,6 +151,7 @@ function blowCandle(){
     },3000);
 
 
+
 }
 
 
@@ -152,7 +159,8 @@ function blowCandle(){
 
 
 
-// Crackers Effect 🎆
+
+// Crackers 🎆
 
 function createCrackers(){
 
@@ -160,7 +168,7 @@ function createCrackers(){
     let cracker=document.createElement("div");
 
 
-    cracker.innerHTML="🎆🎇✨";
+    cracker.innerHTML="🎆✨🎇";
 
 
     cracker.style.position="fixed";
@@ -169,7 +177,7 @@ function createCrackers(){
 
     cracker.style.left="40%";
 
-    cracker.style.fontSize="50px";
+    cracker.style.fontSize="60px";
 
 
     document.body.appendChild(cracker);
@@ -178,13 +186,14 @@ function createCrackers(){
 
     setTimeout(()=>{
 
+
         cracker.remove();
+
 
     },3000);
 
 
 }
-
 
 
 
@@ -213,8 +222,7 @@ function openGift(){
 
 
 
-
-// Wishes 💌
+// Images ➜ Wishes 📸
 
 function showWishes(){
 
@@ -236,7 +244,7 @@ function showWishes(){
 
 
 
-// Password 🔐
+// Wishes ➜ Password 🔐
 
 function showPassword(){
 
@@ -253,6 +261,11 @@ function showPassword(){
 
 
 
+
+
+
+
+// Password Check 🔐
 
 function checkPassword(){
 
@@ -280,7 +293,8 @@ function checkPassword(){
 
 
         document.getElementById("secretMessage")
-        .innerHTML="❌ Wrong Password";
+        .innerHTML =
+        "❌ Wrong Password";
 
 
     }
@@ -297,32 +311,35 @@ function checkPassword(){
 
 // Video & Music Control 🎥🎵
 
-let birthdayVideo =
+window.onload=function(){
+
+
+let video =
 document.getElementById("birthdayVideo");
 
 
-let bgMusic =
+let music =
 document.getElementById("bgMusic");
 
 
 
-if(birthdayVideo){
+if(video){
 
 
-birthdayVideo.addEventListener("play",()=>{
+video.addEventListener("play",()=>{
 
 
-    bgMusic.pause();
+    music.pause();
 
 
 });
 
 
 
-birthdayVideo.addEventListener("ended",()=>{
+video.addEventListener("ended",()=>{
 
 
-    bgMusic.play();
+    music.play();
 
 
 });
@@ -332,12 +349,16 @@ birthdayVideo.addEventListener("ended",()=>{
 
 
 
+};
 
 
 
 
 
-// Final Message ❤️
+
+
+
+// Video ➜ Final ❤️
 
 function showFinal(){
 
@@ -351,3 +372,5 @@ function showFinal(){
 
 
 }
+
+    
