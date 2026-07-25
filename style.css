@@ -184,7 +184,6 @@ transform-origin:bottom center;
 }
 
 
-
 .balloon{
 
 width:85px;
@@ -246,45 +245,62 @@ content:"";
 
 position:absolute;
 
-bottom:-140px;
+bottom:-150px;
 
 left:50%;
 
-
 width:3px;
 
-height:140px;
+height:150px;
 
-background:#ddd;
+background:linear-gradient(
+white,
+rgba(255,255,255,0.2)
+);
+
+
+transform:rotate(
+calc((var(--rotate))*1deg)
+);
 
 }
 
 
+.balloon-knot{
 
-.ribbon{
+position:absolute;
+
+bottom:20px;
+
+left:50%;
+
+transform:translateX(-50%);
 
 font-size:90px;
 
-margin-top:-40px;
+z-index:10;
+
+
+filter:
+
+drop-shadow(0 0 20px pink);
+
+
+animation:knotMove 2s infinite;
 
 }
 
 
 
-@keyframes floatBalloon{
-
+@keyframes knotMove{
 
 50%{
 
-transform:translateY(-20px);
+transform:translateX(-50%) scale(1.1);
 
 }
 
-
 }
-
-
-
 
 /* Name Glow */
 
