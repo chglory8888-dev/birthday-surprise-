@@ -343,40 +343,33 @@ createFireworks();
 }
 
 
-
-
-
 function createFireworks(){
 
-
-let box =
-document.getElementById("fireworks");
+let box=document.getElementById("fireworks");
 
 
+for(let i=0;i<80;i++){
 
-for(let i=0;i<50;i++){
 
-
-let spark =
-document.createElement("span");
+let spark=document.createElement("span");
 
 
 spark.className="spark";
 
 
-spark.style.left =
-Math.random()*100+"%";
+spark.style.left=Math.random()*100+"%";
+
+spark.style.top=Math.random()*70+"%";
 
 
-spark.style.top =
-Math.random()*80+"%";
+spark.style.animationDelay=
+Math.random()*2+"s";
 
 
 box.appendChild(spark);
 
 
 }
-
 
         }
 setInterval(function(){
