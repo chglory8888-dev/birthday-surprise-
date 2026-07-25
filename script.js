@@ -404,4 +404,34 @@ photoIndex = 0;
 document.getElementById("slideImage").src = photos[photoIndex];
 
 },3000);
+// Password check code
+function checkPassword(){
+
+    let pass = document.getElementById("password").value;
+
+    if(pass=="DD-MM-YEAR"){
+
+        document.getElementById("passwordSection")
+        .classList.add("hidden");
+
+        document.getElementById("videoSection")
+        .classList.remove("hidden");
+
+    }
+
+}
+
+
+// Final message open
+
+function showFinal(){
+
+    document.getElementById("videoSection")
+    .classList.add("hidden");
+
+
+    document.getElementById("finalMessage")
+    .classList.remove("hidden");
+
+}
 
