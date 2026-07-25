@@ -616,6 +616,148 @@ line-height:1.1;
 }
 
 }
+/* Tablet */
+@media (min-width:601px) and (max-width:1024px){
+
+h1{
+    font-size:45px;
+}
+
+h2{
+    font-size:35px;
+}
+
+
+.shine-name{
+
+    font-size:90px;
+
+}
+
+
+#finalMessage h2{
+
+    font-size:120px;
+
+}
+
+
+.slider img{
+
+    width:500px;
+
+}
+
+
+.balloon{
+
+    width:90px;
+
+    height:110px;
+
+}
+
+}
+
+
+
+/* Laptop */
+@media (min-width:1025px) and (max-width:1600px){
+
+
+h1{
+
+    font-size:55px;
+
+}
+
+
+.shine-name{
+
+    font-size:120px;
+
+}
+
+
+#finalMessage h2{
+
+    font-size:180px;
+
+}
+
+
+.slider img{
+
+    width:400px;
+
+}
+
+
+}
+
+
+
+/* Large Screen / TV */
+
+@media (min-width:1601px){
+
+
+h1{
+
+    font-size:80px;
+
+}
+
+
+.shine-name{
+
+    font-size:180px;
+
+}
+
+
+#finalMessage h1{
+
+    font-size:100px;
+
+}
+
+
+#finalMessage h2{
+
+    font-size:250px;
+
+}
+
+
+.slider img{
+
+    width:700px;
+
+}
+
+
+button{
+
+    font-size:30px;
+
+    padding:20px 50px;
+
+}
+
+
+.balloon{
+
+    width:130px;
+
+    height:160px;
+
+    font-size:40px;
+
+}
+
+
+}
         
 
 
