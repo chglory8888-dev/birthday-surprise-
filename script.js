@@ -79,13 +79,12 @@ balloon.className="balloon";
 
 // positions
 
-item.style.left=
+item.style.left =
 Math.random()*330+"px";
 
 
-item.style.top=
+item.style.top =
 Math.random()*300+"px";
-
 
 
 // first 8 balloons have numbers
