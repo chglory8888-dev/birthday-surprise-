@@ -47,23 +47,20 @@ let balloonNumbers = [
 
 function createBalloons(){
 
-let container=document.getElementById("balloonBouquet");
+let box=document.getElementById("balloonBouquet");
 
-container.innerHTML="";
-
-
-let numbers=[
-7,15,20,31,45,57,10,26
-];
+box.innerHTML="";
 
 
-// 50 empty balloons
+let numbers=[7,15,20,31,45,57,10,26];
+
 
 for(let i=0;i<50;i++){
 
-let div=document.createElement("div");
 
-div.className="balloonItem";
+let item=document.createElement("div");
+
+item.className="balloonItem";
 
 
 let balloon=document.createElement("div");
@@ -71,11 +68,8 @@ let balloon=document.createElement("div");
 balloon.className="balloon";
 
 
-// every 6th balloon gets number
 
-if(i < 8){
-
-balloon.classList.add("number");
+if(i<8){
 
 balloon.innerHTML=numbers[i];
 
@@ -83,7 +77,8 @@ balloon.innerHTML=numbers[i];
 balloon.onclick=function(){
 
 
-if(numbers[i]===26){
+if(numbers[i]==26){
+
 
 document.getElementById("blastSound").play();
 
@@ -93,12 +88,10 @@ balloon.innerHTML="💥";
 
 setTimeout(()=>{
 
-document.getElementById("balloonSection")
-.classList.add("hidden");
 
+document.getElementById("balloonSection").classList.add("hidden");
 
-document.getElementById("chinnari")
-.classList.remove("hidden");
+document.getElementById("chinnari").classList.remove("hidden");
 
 
 },700);
@@ -107,6 +100,7 @@ document.getElementById("chinnari")
 }
 
 else{
+
 
 document.getElementById("wrongSound").play();
 
@@ -117,20 +111,16 @@ document.getElementById("wrongSound").play();
 
 
 }
-else{
-
-balloon.innerHTML="";
-
-}
 
 
 
-div.appendChild(balloon);
+item.appendChild(balloon);
 
-container.appendChild(div);
+box.appendChild(item);
 
 
 }
+
 
 }
 
