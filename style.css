@@ -626,3 +626,104 @@ opacity:.7;
 }
 
 }
+/* Final Birthday Message */
+
+#finalMessage h1{
+
+font-size:90px;
+
+margin-bottom:40px;
+
+color:#ffd700;
+
+text-shadow:
+0 0 15px white,
+0 0 40px gold,
+0 0 70px orange;
+
+animation:nameGlow 2s infinite;
+
+}
+
+
+
+#finalMessage h2{
+
+font-size:120px;
+
+margin:20px;
+
+color:white;
+
+text-shadow:
+0 0 20px pink,
+0 0 50px #ff69b4,
+0 0 80px gold;
+
+}
+
+
+
+.final-text{
+
+margin-top:60px;
+
+max-width:900px;
+
+font-size:28px;
+
+line-height:1.8;
+
+font-family:'Poppins',sans-serif;
+
+text-shadow:0 0 15px pink;
+
+animation:fadeIn 3s;
+
+}
+
+
+
+.final-text h3{
+
+margin-top:50px;
+
+font-size:40px;
+
+color:#ffd700;
+
+}
+
+
+
+@keyframes nameGlow{
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+}
+
+
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
