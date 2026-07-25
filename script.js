@@ -401,4 +401,45 @@ image.classList.remove("slide-animation");
 }
 
 },4000);
+// =======================
+// Video Music Control
+// =======================
+
+let video = document.getElementById("birthdayVideo");
+let music = document.getElementById("bgMusic");
+
+
+if(video && music){
+
+
+    // Video start - music mute
+
+    video.addEventListener("play", function(){
+
+        music.pause();
+
+    });
+
+
+
+    // Video pause - music continue
+
+    video.addEventListener("pause", function(){
+
+        music.play();
+
+    });
+
+
+
+    // Video end - music continue
+
+    video.addEventListener("ended", function(){
+
+        music.play();
+
+    });
+
+
+}
 
