@@ -402,22 +402,35 @@ let photos = [
 let photoIndex = 0;
 
 
-setInterval(function(){
+setInterval(()=>{
 
 
-    photoIndex++;
+let img = document.getElementById("slideImage");
 
 
-    if(photoIndex >= photos.length){
-
-        photoIndex = 0;
-
-    }
+img.style.transform="translateX(-100%)";
 
 
-    document.getElementById("slideImage").src = photos[photoIndex];
+setTimeout(()=>{
+
+
+photoIndex++;
+
+
+if(photoIndex >= photos.length){
+
+photoIndex=0;
+
+}
+
+
+img.src = photos[photoIndex];
+
+
+img.style.transform="translateX(0)";
+
+
+},500);
 
 
 },3000);
-
-    
