@@ -15,12 +15,9 @@ document.getElementById("balloonSection")
 .classList.remove("hidden");
 
 
-startMusic();
-
 createBalloons();
 
 }
-
 
 
 
