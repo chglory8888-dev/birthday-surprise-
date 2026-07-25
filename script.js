@@ -416,6 +416,20 @@ document.getElementById("finalMessage")
 .classList.remove("hidden");
 
 
+// fireworks sound
+
+let sound=document.getElementById("fireworkSound");
+
+sound.volume=0.7;
+
+sound.play();
+
+
+// start fireworks
+
+createFireworks();
+
+
 }
 function createFireworks(){
 
