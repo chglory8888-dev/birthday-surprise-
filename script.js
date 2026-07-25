@@ -79,12 +79,35 @@ balloon.className="balloon";
 
 // positions
 
-item.style.left =
-Math.random()*330+"px";
+let positions=[
+
+[180,20],
+[90,70],
+[270,70],
+[40,150],
+[340,150],
+[120,220],
+[250,220],
+[190,300]
+
+];
 
 
-item.style.top =
-Math.random()*300+"px";
+if(i<8){
+
+item.style.left=positions[i][0]+"px";
+
+item.style.top=positions[i][1]+"px";
+
+}
+
+else{
+
+item.style.left=(100+Math.random()*250)+"px";
+
+item.style.top=(50+Math.random()*300)+"px";
+
+}
 
 
 // first 8 balloons have numbers
