@@ -442,4 +442,64 @@ if(video && music){
 
 
 }
+let balloons = document.querySelectorAll(".balloon");
+
+
+balloons.forEach(balloon => {
+
+
+balloon.onclick = function(){
+
+
+let number = balloon.innerHTML;
+
+
+if(number == "26"){
+
+
+document.getElementById("blastSound").play();
+
+
+balloon.style.transform="scale(2)";
+
+balloon.style.opacity="0";
+
+
+setTimeout(()=>{
+
+
+document.getElementById("balloonSection")
+.classList.add("hidden");
+
+
+document.getElementById("chinnari")
+.classList.remove("hidden");
+
+
+},800);
+
+
+
+}
+
+else{
+
+
+document.getElementById("wrongSound").play();
+
+
+balloon.innerHTML="💥";
+
+
+balloon.style.opacity="0";
+
+
+}
+
+
+
+}
+
+
+});
 
