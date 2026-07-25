@@ -843,6 +843,100 @@ transform:translateY(-15px);
 }
 
 }
+/* Surprise Button Glow */
+
+button{
+
+position:relative;
+
+overflow:hidden;
+
+animation:buttonPulse 2s infinite;
+
+}
+
+
+
+button::before{
+
+content:"✨";
+
+position:absolute;
+
+left:-20px;
+
+top:50%;
+
+font-size:25px;
+
+animation:sparkleMove 2s infinite;
+
+}
+
+
+
+@keyframes buttonPulse{
+
+
+0%{
+
+box-shadow:
+0 0 10px pink;
+
+}
+
+
+50%{
+
+box-shadow:
+0 0 30px gold,
+0 0 60px pink;
+
+}
+
+
+100%{
+
+box-shadow:
+0 0 10px pink;
+
+}
+
+
+}
+
+
+
+
+@keyframes sparkleMove{
+
+
+0%{
+
+left:-20px;
+
+opacity:0;
+
+}
+
+
+50%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+left:100%;
+
+opacity:0;
+
+}
+
+
+}
         
 
 
