@@ -553,3 +553,42 @@ fire.remove();
 
 
 }
+function createConfetti(){
+
+for(let i=0;i<50;i++){
+
+
+let confetti=document.createElement("span");
+
+
+confetti.innerHTML="✨";
+
+
+confetti.className="confetti";
+
+
+confetti.style.left=
+Math.random()*100+"%";
+
+
+confetti.style.top="50%";
+
+
+confetti.style.fontSize=
+(15+Math.random()*30)+"px";
+
+
+document.body.appendChild(confetti);
+
+
+
+setTimeout(()=>{
+
+confetti.remove();
+
+},2000);
+
+
+}
+
+}
