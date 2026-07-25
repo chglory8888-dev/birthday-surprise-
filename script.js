@@ -7,19 +7,15 @@
 
 function startGame(){
 
-document.getElementById("welcomeScreen")
-.classList.add("hidden");
+document.getElementById("welcomeScreen").classList.add("hidden");
 
 
-document.getElementById("balloonSection")
-.classList.remove("hidden");
+document.getElementById("balloonSection").classList.remove("hidden");
 
 
 createBalloons();
 
 }
-
-
 
 
 // Background Music
