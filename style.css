@@ -293,18 +293,94 @@ top:100%;
 
 /* Common ribbon */
 
-#balloonBouquet::after{
+#balloonBouquet{
 
-content:"🎀";
+display:flex;
 
-position:absolute;
+flex-wrap:wrap;
 
-bottom:20px;
+justify-content:center;
 
-left:45%;
+align-items:flex-start;
 
-font-size:50px;
+width:400px;
 
+height:500px;
+
+gap:5px;
+
+overflow:hidden;
+
+}
+
+
+.balloonItem{
+
+position:relative;
+
+}
+
+
+.balloon{
+
+width:60px;
+
+height:80px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+circle at 30% 20%,
+white,
+#ff4081,
+#c2185b
+);
+
+
+box-shadow:
+
+inset -10px -15px 20px rgba(0,0,0,.3),
+
+0 0 15px pink;
+
+
+margin:5px;
+
+}
+
+
+
+/* strings */
+
+.balloonItem::after{
+
+content:"";
+
+display:block;
+
+height:80px;
+
+width:2px;
+
+background:white;
+
+margin:auto;
+
+}
+
+
+
+.number{
+
+color:white;
+
+font-size:25px;
+
+font-weight:bold;
+
+}
 }
 
 .balloon{
