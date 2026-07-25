@@ -1009,3 +1009,14 @@ transform:scale(1);
 
 
 }
+@media(max-width:600px){
+
+.big-name{
+
+font-size:65px;
+
+letter-spacing:2px;
+
+}
+
+}
