@@ -562,3 +562,67 @@ font-size:45px;
 
 
     }
+/* Final Birthday Screen */
+
+#finalMessage{
+
+background:
+
+linear-gradient(
+rgba(0,0,40,.4),
+rgba(0,0,0,.8)
+),
+
+url("background.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+
+
+#finalMessage h1{
+
+font-size:90px;
+
+color:#ffd700;
+
+text-shadow:
+
+0 0 20px gold,
+
+0 0 50px orange;
+
+animation:glow 2s infinite;
+
+}
+
+
+
+#finalMessage h2{
+
+font-size:120px;
+
+color:white;
+
+text-shadow:
+
+0 0 30px pink,
+
+0 0 60px gold;
+
+}
+
+
+
+@keyframes glow{
+
+50%{
+
+opacity:.7;
+
+}
+
+}
