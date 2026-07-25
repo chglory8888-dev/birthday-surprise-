@@ -244,14 +244,8 @@ function showWishes(){
 
 function showPassword(){
 
-
-    document.getElementById("wishSection")
-    .style.display="none";
-
-
-    document.getElementById("passwordSection")
-    .classList.remove("hidden");
-
+document.getElementById("passwordSection")
+.classList.remove("hidden");
 
 }
 
