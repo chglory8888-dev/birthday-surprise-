@@ -17,28 +17,26 @@ color:white;
 
 text-align:center;
 
-min-height:100vh;
-
 
 background:
 
 linear-gradient(
-rgba(0,0,40,0.5),
-rgba(0,0,20,0.8)
+rgba(20,0,30,0.45),
+rgba(0,0,0,0.75)
 ),
 
-url("background.jpg");
+url("valentines-day-background_23-2151904252.jpg");
 
 
 background-size:cover;
 
 background-position:center;
 
+background-attachment:fixed;
+
 overflow-x:hidden;
 
 }
-
-
 
 
 section{
