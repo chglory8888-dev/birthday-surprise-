@@ -564,3 +564,9 @@ function finalCelebration(){
     createSparkle();
 
 }
+    function startWebsite(){
+
+    document.getElementById("welcomeScreen")
+    .classList.add("hideWelcome");
+
+    }
