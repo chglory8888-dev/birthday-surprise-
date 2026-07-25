@@ -12,15 +12,11 @@ function startMusic(){
 
 // Start Surprise ❤️
 
-function startGame(){
+function startWebsite(){
 
-    document.getElementById("welcomeScreen")
-    .style.display="none";
+    document.getElementById("welcomeScreen").style.display="none";
 
-
-    document.getElementById("balloonSection")
-    .classList.remove("hidden");
-
+    document.getElementById("mainContent").style.display="block";
 
     startMusic();
 
