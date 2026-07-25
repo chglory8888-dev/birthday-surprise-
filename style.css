@@ -171,6 +171,12 @@ height:550px;
 margin:auto;
 
 }
+#balloonBouquet{
+
+filter:
+drop-shadow(0 0 25px pink);
+
+}
 
 
 
@@ -298,6 +304,35 @@ animation:knotMove 2s infinite;
 50%{
 
 transform:translateX(-50%) scale(1.1);
+
+}
+
+}
+#balloonSection h1{
+
+font-size:55px;
+
+color:#ffd700;
+
+
+text-shadow:
+
+0 0 15px white,
+
+0 0 40px gold;
+
+
+animation:titleGlow 2s infinite;
+
+}
+
+
+
+@keyframes titleGlow{
+
+50%{
+
+filter:brightness(1.5);
 
 }
 
@@ -1299,5 +1334,21 @@ opacity:0;
 
 }
 
+
+}
+@media(max-width:600px){
+
+#balloonSection h1{
+
+font-size:35px;
+
+}
+
+
+#balloonBouquet{
+
+transform:scale(.75);
+
+}
 
 }
