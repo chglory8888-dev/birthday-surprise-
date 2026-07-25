@@ -406,6 +406,17 @@ document.getElementById("giftSection")
 
 function openGift(){
 
+let gift=document.querySelector(".gift-box");
+
+
+gift.innerHTML="✨🎁✨";
+
+
+gift.style.transform="scale(1.5)";
+
+
+setTimeout(()=>{
+
 
 document.getElementById("giftSection")
 .classList.add("hidden");
@@ -418,8 +429,10 @@ document.getElementById("memorySection")
 startSlider();
 
 
-}
+},1500);
 
+
+}
 
 
 
