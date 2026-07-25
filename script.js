@@ -133,7 +133,9 @@ document.getElementById("blastSound")
 
 
 
-balloon.innerHTML="💥";
+balloon.classList.add("pop");
+
+createConfetti();
 
 
 balloon.style.transform="scale(2)";
