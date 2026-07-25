@@ -109,7 +109,53 @@ item.className="balloonItem";
 let balloon = document.createElement("div");
 
 balloon.className="balloon";
+  // Random balloon colours
 
+let balloonColors = [
+
+"#ff1744",
+"#ff4081",
+"#ff9800",
+"#ffd600",
+"#00e5ff",
+"#7c4dff",
+"#00e676",
+"#e040fb"
+
+];
+
+
+let color =
+balloonColors[
+Math.floor(Math.random()*balloonColors.length)
+];
+
+
+balloon.style.background =
+
+`radial-gradient(
+circle at 30% 20%,
+white,
+${color},
+#400020
+)`;
+.balloon{
+
+transition:0.4s;
+
+}
+
+
+.balloon:hover{
+
+transform:
+scale(1.15)
+translateY(-10px);
+
+filter:
+brightness(1.4);
+
+}
 
 
 
