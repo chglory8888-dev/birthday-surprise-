@@ -487,3 +487,27 @@ setInterval(()=>{
 navigator.serviceWorker.register("service-worker.js");
 
     }
+    // Secret Password Unlock 🔐
+
+function checkPassword(){
+
+    let password = document.getElementById("password").value;
+
+    if(password === "26-07-2020"){
+
+        document.getElementById("secretMessage").innerHTML =
+        "🎉 Secret Surprise Unlocked ❤️🎁";
+
+        createConfetti();
+        createHearts();
+
+    }
+
+    else{
+
+        document.getElementById("secretMessage").innerHTML =
+        "❌ Wrong Password";
+
+    }
+
+}
