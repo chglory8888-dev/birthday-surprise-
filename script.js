@@ -379,4 +379,33 @@ box.appendChild(spark);
 
 
         }
+setInterval(function(){
+
+let image=document.getElementById("slideImage");
+
+if(image){
+
+image.classList.add("slide-animation");
+
+
+setTimeout(()=>{
+
+photoIndex++;
+
+if(photoIndex >= photos.length){
+photoIndex=0;
+}
+
+
+image.src=photos[photoIndex];
+
+
+image.classList.remove("slide-animation");
+
+
+},1000);
+
+}
+
+},4000);
 
