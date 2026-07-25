@@ -219,6 +219,13 @@ margin:auto;
 gap:5px;
 
 }
+.balloonItem{
+
+margin:-10px;
+
+position:relative;
+
+}
 
 
 .balloon{
