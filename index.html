@@ -10,7 +10,7 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="icon" href="icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
@@ -18,9 +18,20 @@
 <body>
 
 
+<!-- Background Music -->
+
+<audio id="bgMusic" loop>
+
+<source src="assets/music/birthday.mp3" type="audio/mp3">
+
+</audio>
+
+
+
+
 <!-- Welcome Screen -->
 
-<div id="welcomeScreen">
+<section id="welcomeScreen">
 
 <div class="welcome-content">
 
@@ -31,61 +42,155 @@
 <p>A Special Gift Full of Love 🎁</p>
 
 
-<button onclick="startWebsite()">
+<button onclick="startGame(); startMusic();">
+
 Open Surprise ✨
+
 </button>
 
 
 </div>
 
-</div>
+</section>
 
 
 
-<!-- Main Website -->
 
 
-<div id="mainContent">
+
+<!-- Balloon Game -->
+
+<section id="balloonSection" class="hidden">
 
 
-<h1 class="title">
-🎂 Happy Birthday Shanvitha Priya 🎂
+<h1>🎈 Find The Special Balloon 🎈</h1>
+
+<p>Click the special number ❤️</p>
+
+
+<div id="balloonContainer"></div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Hii Chinnari -->
+
+<section id="chinnari" class="hidden">
+
+
+<h2>✨ Hii ✨</h2>
+
+
+<h1 class="calligraphy">
+
+𝓒𝓱𝓲𝓷𝓷𝓪𝓻𝓲 ❤️
+
 </h1>
 
 
-
-<!-- Family Message -->
-
-<div class="message-card">
-
-<h2>❤️ With Lots of Love ❤️</h2>
-
 <p>
-From Our Loving Family Members
+A Special Surprise is Waiting for You ❤️
 </p>
 
-<p>
 
-👨‍👩‍👧‍👦 Mom & Dad ❤️ <br><br>
+<button onclick="showCake()">
 
-👵 Grandparents ❤️ <br><br>
+Next ➜ 🎂
 
-❤️ Attha ❤️ <br><br>
+</button>
 
-👫 Brothers & Sisters ❤️
 
-</p>
+</section>
+
+
+
+
+
+
+
+<!-- Cake -->
+
+<section id="cakeSection" class="hidden">
+
+
+<h1>🎂 Happy Birthday 🎂</h1>
+
+
+<div class="cake">
+
+🎂
 
 </div>
 
 
+<p id="cakeMessage">
+
+Make a Wish ❤️
+
+</p>
 
 
-<!-- Photo Gallery -->
+<button onclick="blowCandle()">
+
+🕯️ Blow Candle
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Gift -->
+
+<section id="giftSection" class="hidden">
+
+
+<h1>🎁 Special Gift For You 🎁</h1>
+
+
+<div class="gift" onclick="openGift()">
+
+🎁
+
+</div>
+
+
+<p>
+
+Click Gift Box ❤️
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- Images -->
+
+<section id="memorySection" class="hidden">
+
+
+<h1>📸 Beautiful Memories ❤️</h1>
+
 
 <div class="gallery">
-
-<h2>📸 Beautiful Memories</h2>
 
 
 <img src="assets/images/photo1.jpg">
@@ -99,81 +204,162 @@ From Our Loving Family Members
 
 
 
+<button onclick="showWishes()">
+
+Next 💌
+
+</button>
 
 
-<!-- Cake -->
-
-<div class="cake-section">
-
-<h2>Make a Wish 🎂</h2>
+</section>
 
 
-<div class="cake" onclick="cutCake()">
-
-🎂
-
-</div>
 
 
-<p id="cakeMessage">
-Click the cake 🎉
+
+
+
+
+<!-- Birthday Wishes -->
+
+<section id="wishSection" class="hidden">
+
+
+<h1 class="birthday-title">
+
+🎉 Happy Birthday 
+
+<span>
+Shanvitha Priya
+</span>
+
+🎉
+
+</h1>
+
+
+
+<div class="birthday-message">
+
+
+<p>
+❤️ Dear Shanvitha Priya ❤️
 </p>
 
 
-</div>
-
-
-
-
-
-
-<!-- Gift -->
-
-<div class="gift-section">
-
-<h2>Special Surprise 🎁</h2>
-
-
-<div class="gift" onclick="openGift()">
-
-🎁
-
-</div>
-
-
-<p id="giftMessage">
-Click the gift
+<p>
+May your special day be filled with happiness,
+love, laughter and beautiful memories. ✨
 </p>
 
 
+<p>
+May God bless you with good health,
+success and a bright future. 🙏
+</p>
+
+
+<p>
+Keep smiling, keep shining and keep following your dreams ❤️
+</p>
+
+
+
+<button onclick="showPassword()">
+
+Secret Surprise 🔐
+
+</button>
+
+
 </div>
 
 
+</section>
 
 
 
-<!-- Secret Password -->
 
-<div class="secret-box">
 
-<h2>🔐 Secret Surprise</h2>
+
+
+
+<!-- Password -->
+
+<section id="passwordSection" class="hidden">
+
+
+<h2>
+
+🔐 Secret Surprise
+
+</h2>
+
 
 
 <input id="password"
 type="password"
-placeholder="Enter your birthday date (DD-MM-YEAR)">
+placeholder="Enter DD-MM-YEAR">
 
 
 
 <button onclick="checkPassword()">
+
 Unlock 🎁
+
 </button>
+
 
 
 <p id="secretMessage"></p>
 
 
-</div>
+</section>
+
+
+
+
+
+
+
+
+<!-- Video -->
+
+<section id="videoSection" class="hidden">
+
+
+<h1>
+
+🎥 Special Birthday Video ❤️
+
+</h1>
+
+
+
+<video id="birthdayVideo" width="320" controls>
+
+
+<source src="assets/videos/video1.mp4" type="video/mp4">
+
+
+</video>
+
+
+
+<br><br>
+
+
+
+<button onclick="showFinal()">
+
+Next ❤️
+
+</button>
+
+
+</section>
+
+
 
 
 
@@ -182,24 +368,58 @@ Unlock 🎁
 
 <!-- Final Message -->
 
-<div id="finalMessage">
+<section id="finalMessage" class="hidden">
 
 
 <h1>
+
 🎉❤️ Happy Birthday ❤️🎉
+
 </h1>
 
 
+<h2>
+
+Shanvitha Priya ❤️
+
+</h2>
+
+
+
 <p>
+
 With Lots of Love From Our Loving Family Members ❤️
+
 </p>
 
 
-</div>
+
+<p>
+
+👨‍👩‍👧‍👦 Mom & Dad ❤️
+<br><br>
+
+👵 Grandparents ❤️
+<br><br>
+
+👩 Your Loving Attha ❤️
+<br><br>
+
+👫 Brothers & Sisters ❤️
+
+</p>
 
 
+<h2>
 
-</div>
+🙏 May God Bless You Always 🙏
+
+</h2>
+
+
+</section>
+
+
 
 
 
@@ -210,3 +430,4 @@ With Lots of Love From Our Loving Family Members ❤️
 </body>
 
 </html>
+
