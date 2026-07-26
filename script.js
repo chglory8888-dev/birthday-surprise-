@@ -3,17 +3,24 @@
 // =============================
 
 
+// =============================
 // Start Game
+// =============================
 
-function createBalloons(){
+function startGame(){
 
-let box=document.getElementById("balloonBouquet");
+document.getElementById("welcomeScreen")
+.classList.add("hidden");
 
-console.log(box);
 
-box.innerHTML="";
+document.getElementById("balloonSection")
+.classList.remove("hidden");
+
+
+createBalloons();
 
 }
+
 
 
 // =============================
@@ -23,6 +30,7 @@ box.innerHTML="";
 function startMusic(){
 
 let music=document.getElementById("bgMusic");
+
 
 if(music){
 
@@ -44,12 +52,8 @@ music.play();
 
 function createBalloons(){
 
-alert("Balloons Function Working");
-
 
 let box=document.getElementById("balloonBouquet");
-
-...
 
 
 if(!box){
@@ -59,14 +63,13 @@ return;
 }
 
 
+
 box.innerHTML="";
 
 
 
 let numbers=[
-
 7,15,20,31,45,57,10,26
-
 ];
 
 
@@ -86,8 +89,8 @@ let colors=[
 
 
 
-for(let i=0;i<50;i++){
 
+for(let i=0;i<50;i++){
 
 
 let item=document.createElement("div");
@@ -97,11 +100,12 @@ item.className="balloonItem";
 
 
 item.style.left=
-(20+Math.random()*350)+"px";
+Math.random()*350+"px";
 
 
 item.style.top=
-(20+Math.random()*350)+"px";
+Math.random()*350+"px";
+
 
 
 
@@ -123,12 +127,13 @@ balloon.style.background=
 
 
 
+// Number balloons
+
 if(i<8){
 
 
-// Number balloons
-
 let value=numbers[i];
+
 
 balloon.innerHTML=value;
 
@@ -137,16 +142,16 @@ balloon.innerHTML=value;
 balloon.onclick=function(){
 
 
+
 if(value===26){
+
 
 
 balloon.innerHTML="💥";
 
-balloon.classList.add("pop");
-
-
 
 let sound=document.getElementById("blastSound");
+
 
 if(sound){
 
@@ -167,6 +172,7 @@ document.getElementById("chinnari")
 .classList.remove("hidden");
 
 
+
 },1000);
 
 
@@ -176,18 +182,11 @@ document.getElementById("chinnari")
 else{
 
 
-balloon.innerHTML="❌";
-
-
-setTimeout(()=>{
-
-balloon.innerHTML=value;
-
-},800);
-
+balloon.remove();
 
 
 }
+
 
 
 };
@@ -196,10 +195,12 @@ balloon.innerHTML=value;
 
 }
 
-else{
 
 
 // Empty balloons
+
+
+else{
 
 
 balloon.innerHTML="";
@@ -208,17 +209,7 @@ balloon.innerHTML="";
 balloon.onclick=function(){
 
 
-balloon.innerHTML="❌";
-
-
-setTimeout(()=>{
-
-
-balloon.innerHTML="";
-
-
-},800);
-
+balloon.remove();
 
 
 };
@@ -240,16 +231,12 @@ box.appendChild(item);
 }
 
 
+
 }
-
-
-
-
-
-
 // =============================
-// Cake
+// Cake Section
 // =============================
+
 
 function showCake(){
 
@@ -263,6 +250,8 @@ document.getElementById("cakeSection")
 
 
 }
+
+
 
 
 
@@ -318,7 +307,7 @@ document.getElementById("giftSection")
 
 
 // =============================
-// Gift
+// Gift Open
 // =============================
 
 
@@ -328,9 +317,12 @@ function openGift(){
 let gift=document.querySelector(".gift-box");
 
 
+
 if(gift){
 
+
 gift.innerHTML="✨🎁✨";
+
 
 gift.style.transform="scale(1.5)";
 
@@ -366,12 +358,14 @@ startSlider();
 
 
 
+
 // =============================
-// Photos
+// Photo Slider
 // =============================
 
 
 let photos=[
+
 
 "IMG20250801125626.jpg",
 "IMG20250801130030.jpg",
@@ -389,6 +383,7 @@ let photos=[
 "IMG20251004182657.jpg",
 "IMG20251004182706.jpg",
 "IMG20251207194247.jpg"
+
 
 ];
 
@@ -428,7 +423,9 @@ count++;
 
 if(photoIndex>=photos.length){
 
+
 photoIndex=0;
+
 
 }
 
@@ -445,8 +442,14 @@ clearInterval(timer);
 
 
 
-document.getElementById("photoNextBtn")
-.classList.remove("hidden");
+let next=document.getElementById("photoNextBtn");
+
+
+if(next){
+
+next.classList.remove("hidden");
+
+}
 
 
 }
@@ -477,11 +480,14 @@ document.getElementById("memorySection")
 .classList.add("hidden");
 
 
+
 document.getElementById("wishSection")
 .classList.remove("hidden");
 
 
+
 }
+
 
 
 
@@ -499,8 +505,10 @@ document.getElementById("wishSection")
 .classList.add("hidden");
 
 
+
 document.getElementById("passwordSection")
 .classList.remove("hidden");
+
 
 
 }
@@ -511,20 +519,22 @@ document.getElementById("passwordSection")
 function checkPassword(){
 
 
-let pass=
-document.getElementById("password").value;
+let pass=document.getElementById("password").value;
 
 
 
 if(pass==="26-07-2020"){
 
 
+
 document.getElementById("passwordSection")
 .classList.add("hidden");
 
 
+
 document.getElementById("videoSection")
 .classList.remove("hidden");
+
 
 
 }
@@ -549,7 +559,7 @@ document.getElementById("secretMessage")
 
 
 // =============================
-// Final
+// Final Message
 // =============================
 
 
@@ -558,6 +568,7 @@ function showFinal(){
 
 document.getElementById("videoSection")
 .classList.add("hidden");
+
 
 
 document.getElementById("finalMessage")
@@ -579,8 +590,9 @@ sound.play();
 }
 
 
-
 }
+
+
 
 
 
@@ -598,6 +610,7 @@ function createFireworks(){
 let area=document.getElementById("fireworks");
 
 
+
 if(!area){
 
 return;
@@ -612,18 +625,28 @@ setInterval(()=>{
 let burst=document.createElement("div");
 
 
+
 burst.className="firework-burst";
 
 
+
 burst.innerHTML="✨";
+
 
 
 burst.style.left=
 Math.random()*90+"%";
 
 
+
 burst.style.top=
 Math.random()*70+"%";
+
+
+
+burst.style.fontSize=
+(40+Math.random()*50)+"px";
+
 
 
 area.appendChild(burst);
@@ -652,6 +675,7 @@ burst.remove();
 
 
 
+
 // =============================
 // Video Music Control
 // =============================
@@ -660,12 +684,10 @@ burst.remove();
 window.onload=function(){
 
 
-let video=
-document.getElementById("birthdayVideo");
+let video=document.getElementById("birthdayVideo");
 
 
-let music=
-document.getElementById("bgMusic");
+let music=document.getElementById("bgMusic");
 
 
 
@@ -692,6 +714,7 @@ music.play();
 
 
 }
+
 
 
 };
