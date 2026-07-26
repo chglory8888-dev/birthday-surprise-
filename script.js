@@ -7,15 +7,7 @@
 
 function startGame(){
 
-document.getElementById("welcomeScreen")
-.classList.add("hidden");
-
-
-document.getElementById("balloonSection")
-.classList.remove("hidden");
-
-
-createBalloons();
+alert("Function Running");
 
 }
 
