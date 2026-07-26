@@ -155,15 +155,12 @@ document.getElementById("chinnari")
 
 else{
 
+// Empty balloons
 
-let wrong=document.getElementById("wrongSound");
+balloon.innerHTML="";
 
 
-if(wrong){
-
-wrong.play();
-
-}
+balloon.onclick=function(){
 
 
 balloon.innerHTML="❌";
@@ -171,13 +168,9 @@ balloon.innerHTML="❌";
 
 setTimeout(()=>{
 
-balloon.innerHTML="?";
+balloon.innerHTML="";
 
 },800);
-
-
-
-}
 
 
 };
