@@ -172,13 +172,16 @@ font-size:28px;
 
 
 
+
 #balloonBouquet{
+
+display:block;
+
+position:relative;
 
 width:450px;
 
 height:500px;
-
-position:relative;
 
 }
 
