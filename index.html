@@ -7,62 +7,44 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Happy Birthday Shanvitha Priya ❤️</title>
+<title>Birthday Surprise ❤️</title>
 
 
 <link rel="stylesheet" href="style.css">
-
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 
 </head>
 
 
 <body>
-  <div class="love-animation">
 
-<span>❤️</span>
-<span>💗</span>
-<span>🦋</span>
-<span>❤️</span>
-<span>🌹</span>
-<span>💞</span>
-<span>🦋</span>
-<span>❤️</span>
-
-  </div>
-
-
-<!-- Background Music -->
 
 <audio id="bgMusic" loop>
 
-<source src="vennelave.opus" type="audio/ogg">
-</audio>
-  
-
-
-<!-- Balloon Sounds -->
-
-<audio id="wrongSound">
-
-<source src="tupuk.mp3" type="audio/mpeg">
+<source src="vennelave.opus">
 
 </audio>
-  
-<audio id="fireworkSound">
 
-<source src="fireworks.mp3" type="audio/mpeg">
-
-</audio>
 
 <audio id="blastSound">
 
-<source src="balloon-pop.mp3" type="audio/mpeg">
+<source src="blast.mp3">
 
 </audio>
 
+
+<audio id="wrongSound">
+
+<source src="wrong.mp3">
+
+</audio>
+
+
+<audio id="fireworkSound">
+
+<source src="firework.mp3">
+
+</audio>
 
 
 
@@ -75,10 +57,14 @@
 <div class="welcome-content">
 
 
-<h1>❤️ Welcome ❤️</h1>
+<h1>
+❤️ Welcome ❤️
+</h1>
 
 
-<h2>Birthday Surprise</h2>
+<h2>
+Birthday Surprise
+</h2>
 
 
 <p>
@@ -86,45 +72,46 @@ A Special Gift Full of Love 🎁
 </p>
 
 
-<button onclick="startGame()">
+<button onclick="startGame(); startMusic();">
+
 Open Surprise ✨
+
 </button>
 
 
 </div>
 
+
 </section>
 
 
 
 
 
+<!-- Balloon Section -->
 
-<!-- Balloon Game -->
 
 <section id="balloonSection" class="hidden">
 
+
 <h1 class="balloon-title">
+
 🎈 Find The Special Balloon 🎈
+
 </h1>
 
+
 <p class="balloon-subtitle">
+
 Choose the lucky balloon ❤️<br>
+
 Find the hidden surprise 🎁
+
 </p>
 
 
-<p>
-Choose the lucky balloon ❤️
-</p>
+<div id="balloonBouquet">
 
-
-
-<div id="balloonBouquet"></div>
-
-
-<div class="balloon-knot">
-🎀
 </div>
 
 
@@ -134,69 +121,78 @@ Choose the lucky balloon ❤️
 
 
 
-
-
-<!-- Chinnari -->
+<!-- Chinnari Section -->
 
 
 <section id="chinnari" class="hidden">
 
 
 <h1>
-✨ Hii ✨
+
+✨ Hii Chinnari ✨
+
 </h1>
 
 
-<h2 class="shine-name">
+<h2>
 
-Chinnari ❤️
+Shanvitha Priya ❤️
 
 </h2>
 
 
 <p>
-A Special Surprise is Waiting For You ❤️
+
+A Beautiful Surprise Is Waiting For You 🎁
+
 </p>
 
 
-<button onclick="startMusic()">
+<button onclick="showCake()">
 
-Open Surprise ✨
+Next 🎂
 
 </button>
 
 
-
-
-
-
-
-<!-- Cake -->
+</section>
+<!-- Cake Section -->
 
 <section id="cakeSection" class="hidden">
 
+
 <h1 class="cake-title">
+
 🎂 Happy Birthday 🎂
+
 </h1>
 
 
 <div class="cake-box">
 
+
 <div class="cake">
+
 🎂
+
 </div>
 
 
 <div class="candles">
+
 🕯️ 🕯️ 🕯️
+
 </div>
 
 
 </div>
+
 
 
 <p class="wish-text">
+
 ✨ Make a Wish Shanvitha Priya ❤️ ✨
+
 </p>
 
 
@@ -207,22 +203,25 @@ Open Surprise ✨
 </button>
 
 
+
 </section>
 
 
 
 
 
+<!-- Gift Section -->
 
-
-<!-- Gift -->
 
 <section id="giftSection" class="hidden">
 
 
 <h1 class="gift-title">
+
 🎁 Special Gift For You 🎁
+
 </h1>
+
 
 
 <div class="gift-box" onclick="openGift()">
@@ -232,9 +231,13 @@ Open Surprise ✨
 </div>
 
 
+
 <p class="gift-text">
+
 Click The Gift Box ❤️
+
 </p>
+
 
 
 </section>
@@ -243,33 +246,40 @@ Click The Gift Box ❤️
 
 
 
+<!-- Memory Photos Section -->
 
-<!-- Photos -->
 
-
-<section id="memorySection" class="hidden">
 <section id="memorySection" class="hidden">
 
 
 <h1 class="memory-title">
+
 📸 Beautiful Memories ❤️
+
 </h1>
+
 
 
 <div class="photo-frame">
 
+
 <img id="slideImage"
+
 src="IMG20250801125626.jpg"
-alt="Memory Photo">
+
+alt="Memory">
+
 
 </div>
 
 
-<div class="click-hint">
+
+<p class="click-hint">
 
 👇 Tap Next For More Memories
 
-</div>
+</p>
+
 
 
 <button onclick="showWishes()">
@@ -279,14 +289,14 @@ Next 💌
 </button>
 
 
+
 </section>
 
 
 
 
 
-
-<!-- Wishes -->
+<!-- Wishes Section -->
 
 
 <section id="wishSection" class="hidden">
@@ -299,7 +309,8 @@ Next 💌
 </h1>
 
 
-<h2 class="wish-name">
+
+<h2>
 
 Shanvitha Priya ❤️
 
@@ -311,31 +322,41 @@ Shanvitha Priya ❤️
 
 
 <p>
+
 ❤️ Dear Shanvitha Priya ❤️
+
 </p>
 
 
 <p>
+
 Wishing you a very Happy Birthday 🎂✨
+
 </p>
 
 
 <p>
+
 May your life always be filled with happiness,
 love, laughter and beautiful memories. ❤️
+
 </p>
 
 
 <p>
+
 May God bless you with good health,
 success, wisdom and a bright future. 🙏
+
 </p>
 
 
 <p>
+
 Keep smiling 😊  
 Keep shining ⭐  
 Always follow your dreams ❤️
+
 </p>
 
 
@@ -355,9 +376,7 @@ Secret Surprise 🔐
 
 
 
-
-
-<!-- Password -->
+<!-- Password Section -->
 
 
 <section id="passwordSection" class="hidden">
@@ -370,6 +389,7 @@ Secret Surprise 🔐
 </h1>
 
 
+
 <div class="secret-box">
 
 
@@ -380,6 +400,7 @@ Secret Surprise 🔐
 </div>
 
 
+
 <p>
 
 Enter The Secret Date ❤️
@@ -387,11 +408,13 @@ Enter The Secret Date ❤️
 </p>
 
 
-<input 
-id="password"
+
+<input id="password"
+
 type="password"
-placeholder="DD-MM-YYYY"
->
+
+placeholder="DD-MM-YYYY">
+
 
 
 <button onclick="checkPassword()">
@@ -401,21 +424,17 @@ Unlock 🎁
 </button>
 
 
+
 <p id="secretMessage"></p>
+
 
 
 </div>
 
 
+
 </section>
-
-
-
-
-
-
-<!-- Video -->
-
+<!-- Video Section -->
 
 <section id="videoSection" class="hidden">
 
@@ -425,6 +444,7 @@ Unlock 🎁
 🎥 Special Birthday Video ❤️
 
 </h1>
+
 
 
 <div class="video-frame">
@@ -443,11 +463,11 @@ Unlock 🎁
 
 
 
-<div class="click-hint">
+<p class="click-hint">
 
 ✨ Enjoy Your Special Memories ✨
 
-</div>
+</p>
 
 
 
@@ -458,6 +478,7 @@ Next ❤️
 </button>
 
 
+
 </section>
 
 
@@ -465,7 +486,7 @@ Next ❤️
 
 
 
-<!-- Final Message -->
+<!-- Final Birthday Message -->
 
 
 <section id="finalMessage" class="hidden">
@@ -474,7 +495,9 @@ Next ❤️
 <div id="fireworks"></div>
 
 
+
 <div class="final-content">
+
 
 
 <h1>
@@ -484,7 +507,9 @@ Next ❤️
 </h1>
 
 
-<h2 class="big-name">
+
+
+<h2>
 
 Shanvitha Priya ❤️
 
@@ -492,47 +517,76 @@ Shanvitha Priya ❤️
 
 
 
+
+
 <div class="final-text">
 
 
+
 <p>
+
 ❤️ With Lots of Love From Our Loving Family Members ❤️
+
 </p>
 
 
+
+
 <p>
+
 Wishing you endless happiness, love, laughter and beautiful memories on your special day. 🎂✨
+
 </p>
 
 
+
+
 <p>
-May God bless you with good health, success,
-wisdom and a bright future. 🙏❤️
+
+May God bless you with good health,
+success, wisdom and a bright future. 🙏❤️
+
 </p>
 
 
+
+
 <p>
+
 Keep smiling 😊  
 Keep shining ⭐  
 Always follow your dreams ❤️
+
 </p>
+
+
 
 
 
 <p>
 
-👨‍👩‍👧‍👦 Amma & Nanna❤️
+
+👨‍👩‍👧‍👦 Mom & Dad ❤️
+
 <br><br>
 
-👵 Ammamma & Grandparents ❤️
+
+👵 Grandparents ❤️
+
 <br><br>
 
-👫 Brother's & Sister's ❤️
+
+❤️ All Mamas, Pinnys and Your Loving Attha ❤️
+
 <br><br>
 
-♥️ All Mamas, Pinnys and Your Loving Attha ❤️
+
+👫 Brothers & Sisters ❤️
+
 
 </p>
+
+
 
 
 
@@ -543,10 +597,26 @@ Always follow your dreams ❤️
 </h3>
 
 
+
 </div>
 
 
+
 </div>
+
 
 
 </section>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>
