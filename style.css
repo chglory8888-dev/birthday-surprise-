@@ -205,9 +205,19 @@ cursor:pointer;
 
 .balloon{
 
-cursor:pointer;
+display:flex;
 
-pointer-events:auto;
+justify-content:center;
+
+align-items:center;
+
+font-size:28px;
+
+font-weight:bold;
+
+color:white;
+
+cursor:pointer;
 
 }
 
