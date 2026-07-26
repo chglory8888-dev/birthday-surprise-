@@ -938,3 +938,9 @@ font-size:40px;
 
 
 }
+button{
+position:relative;
+z-index:99999;
+pointer-events:auto;
+cursor:pointer;
+}
