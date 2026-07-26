@@ -14,24 +14,6 @@ alert("Function Running");
 
 // Background Music
 
-function startMusic(){
-
-let music=document.getElementById("bgMusic");
-
-if(music){
-
-music.volume=0.5;
-
-music.play();
-
-}
-
-}
-
-
-
-// Create Balloons
-
 function createBalloons(){
 
 let box=document.getElementById("balloonBouquet");
@@ -44,25 +26,6 @@ let numbers=[
 ];
 
 
-numbers.sort(()=>Math.random()-0.5);
-
-
-
-let positions=[
-
-[180,20],
-[90,70],
-[270,70],
-[40,150],
-[340,150],
-[120,220],
-[250,220],
-[190,300]
-
-];
-
-
-
 for(let i=0;i<50;i++){
 
 
@@ -71,48 +34,31 @@ let item=document.createElement("div");
 item.className="balloonItem";
 
 
+
 let balloon=document.createElement("div");
 
 balloon.className="balloon";
 
 
 
-let colors=[
+// random position
 
-"#ff1744",
-"#ff4081",
-"#ff9800",
-"#ffd600",
-"#00e5ff",
-"#7c4dff",
-"#00e676",
-"#e040fb"
+item.style.left=(20+Math.random()*350)+"px";
 
-];
-
-
-let color=
-colors[Math.floor(Math.random()*colors.length)];
+item.style.top=(20+Math.random()*350)+"px";
 
 
 
-balloon.style.background=
-`radial-gradient(circle at 30% 20%,white,${color},#400020)`;
-
-
+// first 8 balloons have numbers
 
 if(i<8){
 
-item.style.left=positions[i][0]+"px";
 
-item.style.top=positions[i][1]+"px";
+balloon.innerHTML=numbers[i];
 
-
-balloon.innerHTML="?";
 
 
 let value=numbers[i];
-
 
 
 balloon.onclick=function(){
@@ -121,16 +67,8 @@ balloon.onclick=function(){
 if(value===26){
 
 
-let sound=document.getElementById("blastSound");
-
-if(sound){
-
-sound.play();
-
-}
-
-
 balloon.innerHTML="💥";
+
 
 balloon.classList.add("pop");
 
@@ -152,6 +90,55 @@ document.getElementById("chinnari")
 
 
 }
+
+else{
+
+
+balloon.innerHTML="❌";
+
+
+setTimeout(()=>{
+
+balloon.innerHTML=value;
+
+},800);
+
+
+}
+
+
+};
+
+
+
+}
+
+else{
+
+
+// empty balloons
+
+balloon.innerHTML="";
+
+
+}
+
+
+
+item.appendChild(balloon);
+
+box.appendChild(item);
+
+
+
+}
+
+
+}
+
+
+
+
 
 else{
 
