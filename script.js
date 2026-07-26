@@ -9,12 +9,14 @@ function startGame(){
 
 document.getElementById("welcomeScreen").style.display="none";
 
+
 document.getElementById("balloonSection").style.display="flex";
+
 
 createBalloons();
 
-}
 
+}
 // Background Music
 
 function createBalloons(){
