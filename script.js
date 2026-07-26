@@ -7,10 +7,13 @@
 
 function startGame(){
 
-alert("Function Running");
+document.getElementById("welcomeScreen").style.display="none";
+
+document.getElementById("balloonSection").style.display="flex";
+
+createBalloons();
 
 }
-
 
 // Background Music
 
