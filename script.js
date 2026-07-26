@@ -12,13 +12,12 @@ document.getElementById("welcomeScreen")
 
 
 document.getElementById("balloonSection")
-.style.display="flex";
+.classList.remove("hidden");
 
 
 createBalloons();
 
 }
-
 
 
 // =============================
@@ -49,8 +48,12 @@ music.play();
 
 function createBalloons(){
 
+alert("Balloons Function Working");
+
 
 let box=document.getElementById("balloonBouquet");
+
+...
 
 
 if(!box){
