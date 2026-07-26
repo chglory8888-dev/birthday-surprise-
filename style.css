@@ -678,21 +678,33 @@ border-radius:30px;
 
 .family-greetings{
 
-font-size:45px;
+font-size:60px;
 
-font-weight:800;
+font-weight:900;
 
-line-height:2;
+line-height:2.2;
+
+color:#fff;
 
 text-shadow:
+0 0 20px pink,
+0 0 40px gold,
+0 0 60px white;
 
-0 0 15px pink,
-0 0 30px gold;
-
-animation:glow 3s infinite;
+animation:familyZoom 3s infinite;
 
 }
 
+
+@keyframes familyZoom{
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
 
 
 @keyframes glow{
@@ -862,3 +874,48 @@ font-size:25px;
 
 
    }
+#chinnari{
+
+gap:40px;
+
+padding:40px;
+
+}
+
+
+#chinnari h1{
+
+font-size:80px;
+
+margin-bottom:20px;
+
+}
+
+
+#chinnari h2{
+
+font-size:70px;
+
+color:#ffd700;
+
+margin-bottom:30px;
+
+}
+
+
+#chinnari p{
+
+font-size:35px;
+
+margin-bottom:40px;
+
+}
+@media(max-width:600px){
+
+.family-greetings{
+
+font-size:30px;
+
+}
+
+}
