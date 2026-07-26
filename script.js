@@ -7,36 +7,102 @@
 
 function startGame(){
 
-document.getElementById("welcomeScreen").style.display="none";
+document.getElementById("welcomeScreen")
+.style.display="none";
 
 
-document.getElementById("balloonSection").style.display="flex";
+document.getElementById("balloonSection")
+.style.display="flex";
 
 
 createBalloons();
 
+}
+
+
+
+// =============================
+// Background Music
+// =============================
+
+function startMusic(){
+
+let music=document.getElementById("bgMusic");
+
+if(music){
+
+music.volume=0.5;
+
+music.play();
 
 }
-// Background Music
+
+}
+
+
+
+
+
+// =============================
+// Create Balloons
+// =============================
 
 function createBalloons(){
 
+
 let box=document.getElementById("balloonBouquet");
+
+
+if(!box){
+
+return;
+
+}
+
 
 box.innerHTML="";
 
 
+
 let numbers=[
+
 7,15,20,31,45,57,10,26
+
 ];
+
+
+
+let colors=[
+
+"#ff1744",
+"#ff4081",
+"#ff9800",
+"#ffd600",
+"#00e5ff",
+"#7c4dff",
+"#00e676",
+"#e040fb"
+
+];
+
 
 
 for(let i=0;i<50;i++){
 
 
+
 let item=document.createElement("div");
 
 item.className="balloonItem";
+
+
+
+item.style.left=
+(20+Math.random()*350)+"px";
+
+
+item.style.top=
+(20+Math.random()*350)+"px";
 
 
 
@@ -46,24 +112,27 @@ balloon.className="balloon";
 
 
 
-// random position
-
-item.style.left=(20+Math.random()*350)+"px";
-
-item.style.top=(20+Math.random()*350)+"px";
+let color=
+colors[Math.floor(Math.random()*colors.length)];
 
 
 
-// first 8 balloons have numbers
+balloon.style.background=
+`radial-gradient(circle at 30% 20%,white,${color},#400020)`;
+
+
+
+
 
 if(i<8){
 
 
-balloon.innerHTML=numbers[i];
-
-
+// Number balloons
 
 let value=numbers[i];
+
+balloon.innerHTML=value;
+
 
 
 balloon.onclick=function(){
@@ -74,8 +143,17 @@ if(value===26){
 
 balloon.innerHTML="💥";
 
-
 balloon.classList.add("pop");
+
+
+
+let sound=document.getElementById("blastSound");
+
+if(sound){
+
+sound.play();
+
+}
 
 
 
@@ -109,6 +187,7 @@ balloon.innerHTML=value;
 },800);
 
 
+
 }
 
 
@@ -121,33 +200,8 @@ balloon.innerHTML=value;
 else{
 
 
-// empty balloons
-
-balloon.innerHTML="";
-
-
-}
-
-
-
-item.appendChild(balloon);
-
-box.appendChild(item);
-
-
-
-}
-
-
-}
-
-
-
-
-
-else{
-
 // Empty balloons
+
 
 balloon.innerHTML="";
 
@@ -160,32 +214,21 @@ balloon.innerHTML="❌";
 
 setTimeout(()=>{
 
+
 balloon.innerHTML="";
 
+
 },800);
+
 
 
 };
 
 
-}
-
-
-else{
-
-
-item.style.left=
-(50+Math.random()*350)+"px";
-
-
-item.style.top=
-(20+Math.random()*330)+"px";
-
-
-balloon.innerHTML="";
-
 
 }
+
+
 
 
 
@@ -199,11 +242,18 @@ box.appendChild(item);
 
 
 }
+
+
+
+
+
+
 // =============================
-// Chinnari Next To Cake
+// Cake
 // =============================
 
 function showCake(){
+
 
 document.getElementById("chinnari")
 .classList.add("hidden");
@@ -212,26 +262,28 @@ document.getElementById("chinnari")
 document.getElementById("cakeSection")
 .classList.remove("hidden");
 
+
 }
 
 
 
-// =============================
-// Blow Candle
-// =============================
 
 function blowCandle(){
 
-let candles=document.querySelector(".candles");
+
+let candle=document.querySelector(".candles");
+
 
 let text=document.querySelector(".wish-text");
 
 
-if(candles){
 
-candles.innerHTML="";
+if(candle){
+
+candle.innerHTML="";
 
 }
+
 
 
 if(text){
@@ -263,11 +315,16 @@ document.getElementById("giftSection")
 
 
 
+
+
+
 // =============================
-// Gift Open
+// Gift
 // =============================
 
+
 function openGift(){
+
 
 let gift=document.querySelector(".gift-box");
 
@@ -277,6 +334,7 @@ if(gift){
 gift.innerHTML="✨🎁✨";
 
 gift.style.transform="scale(1.5)";
+
 
 }
 
@@ -307,8 +365,10 @@ startSlider();
 
 
 
+
+
 // =============================
-// Photo Slider
+// Photos
 // =============================
 
 
@@ -334,6 +394,7 @@ let photos=[
 ];
 
 
+
 let photoIndex=0;
 
 
@@ -352,10 +413,18 @@ return;
 
 
 
-setInterval(()=>{
+let count=0;
+
+
+
+let timer=setInterval(()=>{
 
 
 photoIndex++;
+
+
+count++;
+
 
 
 if(photoIndex>=photos.length){
@@ -366,21 +435,22 @@ photoIndex=0;
 
 
 
-image.style.opacity=0;
-
-
-
-setTimeout(()=>{
-
-
 image.src=photos[photoIndex];
 
 
-image.style.opacity=1;
+
+if(count>=photos.length){
+
+
+clearInterval(timer);
 
 
 
-},500);
+document.getElementById("photoNextBtn")
+.classList.remove("hidden");
+
+
+}
 
 
 
@@ -389,6 +459,9 @@ image.style.opacity=1;
 
 
 }
+
+
+
 
 
 
@@ -410,6 +483,7 @@ document.getElementById("wishSection")
 
 
 }
+
 
 
 
@@ -454,7 +528,6 @@ document.getElementById("videoSection")
 .classList.remove("hidden");
 
 
-
 }
 
 else{
@@ -468,10 +541,16 @@ document.getElementById("secretMessage")
 }
 
 
-
 }
+
+
+
+
+
+
+
 // =============================
-// Video Section
+// Final
 // =============================
 
 
@@ -487,15 +566,14 @@ document.getElementById("finalMessage")
 
 
 
-// Firework Sound
+createFireworks();
 
-let sound =
-document.getElementById("fireworkSound");
+
+
+let sound=document.getElementById("fireworkSound");
 
 
 if(sound){
-
-sound.volume=0.7;
 
 sound.play();
 
@@ -503,27 +581,22 @@ sound.play();
 
 
 
-// Start Fireworks
-
-createFireworks();
-
-
-
 }
 
 
 
+
+
+
 // =============================
-// Fireworks Effect
+// Fireworks
 // =============================
 
 
 function createFireworks(){
 
 
-let area=
-document.getElementById("fireworks");
-
+let area=document.getElementById("fireworks");
 
 
 if(!area){
@@ -537,33 +610,21 @@ return;
 setInterval(()=>{
 
 
-let burst=
-document.createElement("div");
+let burst=document.createElement("div");
 
 
-
-burst.className=
-"firework-burst";
-
+burst.className="firework-burst";
 
 
 burst.innerHTML="✨";
-
 
 
 burst.style.left=
 Math.random()*90+"%";
 
 
-
 burst.style.top=
 Math.random()*70+"%";
-
-
-
-burst.style.fontSize=
-(40+Math.random()*50)+"px";
-
 
 
 area.appendChild(burst);
@@ -576,7 +637,6 @@ setTimeout(()=>{
 burst.remove();
 
 
-
 },1500);
 
 
@@ -586,6 +646,8 @@ burst.remove();
 
 
 }
+
+
 
 
 
@@ -611,7 +673,6 @@ document.getElementById("bgMusic");
 if(video && music){
 
 
-
 video.addEventListener("play",()=>{
 
 
@@ -619,7 +680,6 @@ music.pause();
 
 
 });
-
 
 
 
@@ -632,20 +692,7 @@ music.play();
 });
 
 
-
 }
 
-
-
-};
-document.getElementById("openBtn").onclick = function(){
-
-alert("Button Working");
-
-document.getElementById("welcomeScreen").style.display="none";
-
-document.getElementById("balloonSection").style.display="flex";
-
-createBalloons();
 
 };
