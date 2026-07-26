@@ -9,9 +9,7 @@
 
 <title>Birthday Surprise ❤️</title>
 
-
 <link rel="stylesheet" href="style.css">
-
 
 </head>
 
@@ -20,30 +18,22 @@
 
 
 <audio id="bgMusic" loop>
-
 <source src="vennelave.opus">
-
 </audio>
 
 
 <audio id="blastSound">
-
 <source src="blast.mp3">
-
 </audio>
 
 
 <audio id="wrongSound">
-
 <source src="wrong.mp3">
-
 </audio>
 
 
 <audio id="fireworkSound">
-
 <source src="firework.mp3">
-
 </audio>
 
 
@@ -52,7 +42,6 @@
 <!-- Welcome Screen -->
 
 <section id="welcomeScreen">
-
 
 <div class="welcome-content">
 
@@ -72,12 +61,14 @@ A Special Gift Full of Love 🎁
 </p>
 
 
-<button type="button" onclick="alert('Button Working')">
+<button type="button" onclick="startGame(); startMusic();">
+
 Open Surprise ✨
+
 </button>
 
-</div>
 
+</div>
 
 </section>
 
@@ -90,9 +81,8 @@ Open Surprise ✨
 
 <section id="balloonSection" class="hidden">
 
-<div id="balloonBouquet"></div>
 
-</section>
+<h1 class="balloon-title">
 
 🎈 Find The Special Balloon 🎈
 
@@ -103,14 +93,16 @@ Open Surprise ✨
 
 Choose the lucky balloon ❤️<br>
 
-Find the hidden surprise 🎁
+Find number 26 🎁
 
 </p>
 
 
 <div id="balloonBouquet"></div>
 
+
 </section>
+
 
 
 
@@ -151,7 +143,15 @@ Next 🎂
 
 
 </section>
+
+
+
+
+
+
+
 <!-- Cake Section -->
+
 
 <section id="cakeSection" class="hidden">
 
@@ -175,7 +175,7 @@ Next 🎂
 
 <div class="candles">
 
-🕯️ 🕯️ 🕯️
+🕯️🕯️🕯️
 
 </div>
 
@@ -186,7 +186,7 @@ Next 🎂
 
 <p class="wish-text">
 
-✨ Make a Wish Shanvitha Priya ❤️ ✨
+✨ Make A Wish Shanvitha Priya ❤️ ✨
 
 </p>
 
@@ -200,13 +200,7 @@ Next 🎂
 
 
 </section>
-
-
-
-
-
 <!-- Gift Section -->
-
 
 <section id="giftSection" class="hidden">
 
@@ -218,13 +212,11 @@ Next 🎂
 </h1>
 
 
-
 <div class="gift-box" onclick="openGift()">
 
 🎁
 
 </div>
-
 
 
 <p class="gift-text">
@@ -234,8 +226,8 @@ Click The Gift Box ❤️
 </p>
 
 
-
 </section>
+
 
 
 
@@ -271,21 +263,25 @@ alt="Memory">
 
 <p class="click-hint">
 
-👇 Tap Next For More Memories
+✨ Enjoy Your Memories ✨
 
 </p>
 
 
 
-<button onclick="showWishes()">
+<!-- Hidden until all photos complete -->
 
-Next 💌
+<button id="photoNextBtn" class="hidden" onclick="showWishes()">
+
+👆 Next 💌
 
 </button>
 
 
 
 </section>
+
+
 
 
 
@@ -313,6 +309,7 @@ Shanvitha Priya ❤️
 
 
 
+
 <div class="wish-card">
 
 
@@ -323,11 +320,13 @@ Shanvitha Priya ❤️
 </p>
 
 
+
 <p>
 
 Wishing you a very Happy Birthday 🎂✨
 
 </p>
+
 
 
 <p>
@@ -338,6 +337,7 @@ love, laughter and beautiful memories. ❤️
 </p>
 
 
+
 <p>
 
 May God bless you with good health,
@@ -346,13 +346,16 @@ success, wisdom and a bright future. 🙏
 </p>
 
 
+
 <p>
 
-Keep smiling 😊  
-Keep shining ⭐  
+Keep smiling 😊<br>
+Keep shining ⭐<br>
 Always follow your dreams ❤️
 
 </p>
+
+
 
 
 <button onclick="showPassword()">
@@ -366,6 +369,9 @@ Secret Surprise 🔐
 
 
 </section>
+
+
+
 
 
 
@@ -427,7 +433,6 @@ Unlock 🎁
 </div>
 
 
-
 </section>
 <!-- Video Section -->
 
@@ -458,11 +463,13 @@ Unlock 🎁
 
 
 
+
 <p class="click-hint">
 
 ✨ Enjoy Your Special Memories ✨
 
 </p>
+
 
 
 
@@ -481,6 +488,7 @@ Next ❤️
 
 
 
+
 <!-- Final Birthday Message -->
 
 
@@ -488,6 +496,7 @@ Next ❤️
 
 
 <div id="fireworks"></div>
+
 
 
 
@@ -514,6 +523,7 @@ Shanvitha Priya ❤️
 
 
 
+
 <div class="final-text">
 
 
@@ -527,11 +537,13 @@ Shanvitha Priya ❤️
 
 
 
+
 <p>
 
 Wishing you endless happiness, love, laughter and beautiful memories on your special day. 🎂✨
 
 </p>
+
 
 
 
@@ -542,6 +554,7 @@ May God bless you with good health,
 success, wisdom and a bright future. 🙏❤️
 
 </p>
+
 
 
 
@@ -558,7 +571,7 @@ Always follow your dreams ❤️
 
 
 
-<p>
+<p class="family-greetings">
 
 
 👨‍👩‍👧‍👦 Mom & Dad ❤️
@@ -602,6 +615,7 @@ Always follow your dreams ❤️
 
 
 </section>
+
 
 
 
