@@ -248,6 +248,8 @@ box.appendChild(item);
 
 function showCake(){
 
+alert("SHOW CAKE WORKING");
+
 
 document.getElementById("chinnari")
 .classList.add("hidden");
