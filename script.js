@@ -636,3 +636,14 @@ music.play();
 
 
 };
+document.getElementById("openBtn").onclick = function(){
+
+alert("Button Working");
+
+document.getElementById("welcomeScreen").style.display="none";
+
+document.getElementById("balloonSection").style.display="flex";
+
+createBalloons();
+
+};
