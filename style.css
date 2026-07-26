@@ -196,7 +196,18 @@ margin-top:30px;
 
 position:absolute;
 
-animation:floatBalloon 4s infinite ease-in-out;
+z-index:10;
+
+cursor:pointer;
+
+}
+
+
+.balloon{
+
+cursor:pointer;
+
+pointer-events:auto;
 
 }
 
