@@ -5,17 +5,13 @@
 
 // Start Game
 
-function startGame(){
+function createBalloons(){
 
-document.getElementById("welcomeScreen")
-.style.display="none";
+let box=document.getElementById("balloonBouquet");
 
+console.log(box);
 
-document.getElementById("balloonSection")
-.classList.remove("hidden");
-
-
-createBalloons();
+box.innerHTML="";
 
 }
 
